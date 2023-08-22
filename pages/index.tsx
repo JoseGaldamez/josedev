@@ -3,6 +3,8 @@ import { Navbar } from '@/components/common/Navbar'
 import { BlogHome } from '@/components/sections/BlogHome'
 import { TopHome } from '@/components/sections/TopHome'
 
+import '../src/app/globals.css';
+
 const HomePage = () => {
     return (
         <>
