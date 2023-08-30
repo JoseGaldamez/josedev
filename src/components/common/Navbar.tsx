@@ -16,11 +16,11 @@ export const Navbar = () => {
             <header className="absolute inset-x-0 top-0 z-50">
                 <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
-                        <Link href="/" className="-m-1.5 p-1.5">
+                        <Link href="/" className="-m-1.5 p-1.5 flex align-middle">
                             <span className="sr-only">JG</span>
                             <img
                                 className="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                src="https://images.squarespace-cdn.com/content/v1/54cfb0dae4b0f7ee4c645c35/1480807809558-TBCHC3KCS4VQZGOBYO8Q/JG-Logo.png"
                                 alt=""
                             />
                         </Link>
@@ -56,7 +56,7 @@ export const Navbar = () => {
                                 <span className="sr-only">JG</span>
                                 <img
                                     className="h-8 w-auto"
-                                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                    src="https://images.squarespace-cdn.com/content/v1/54cfb0dae4b0f7ee4c645c35/1480807809558-TBCHC3KCS4VQZGOBYO8Q/JG-Logo.png"
                                     alt=""
                                 />
                             </Link>

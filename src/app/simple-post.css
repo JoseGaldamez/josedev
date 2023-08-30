@@ -1,0 +1,50 @@
+.simple-post {
+    margin: 0px auto;
+    margin-top: 75px;
+    width: 100%;
+    max-width: 780px;
+    display: block;
+}
+
+.simple-post h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    line-height: 3rem;
+    color: #323232;
+    margin-bottom: 1rem;
+}
+
+.simple-post .meta-simple-post {
+    font-size: 0.8rem;
+    color: #757575;
+    margin-bottom: 1.5rem;
+    margin-left: 10px;
+}
+
+.simple-post figure {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.simple-post figure img {
+    width: 100%;
+    scale: 1;
+    transition: all ease 500ms;
+}
+
+.simple-post figure img:hover {
+    width: 100%;
+    scale: 1.02;
+}
+
+.simple-post .content {
+    font-size: large;
+    color: #444;
+    margin-top: 1rem;
+}
+
+.simple-post .content p {
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
