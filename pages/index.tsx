@@ -14,7 +14,6 @@ const HomePage = () => {
             <Navbar />
             <main>
                 <TopHome />
-                <BlogHome />
             </main>
         </>
     )
