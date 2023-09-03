@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head';
-import { Navbar } from '@/components/common/Navbar';
+import { Navbar } from '@/components/common';
 import { BlogHome } from '@/components/sections/BlogHome';
 
 import '../../src/app/globals.css';

@@ -1,0 +1,18 @@
+.topNavPrincipal {
+    width: 100%;
+    position: fixed;
+    border-top: solid 5px purple;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    height: 90px;
+}
+
+/* .topNavPrincipalContainer header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.topNavPrincipalContainer img {
+    margin-left: 10px;
+} */
