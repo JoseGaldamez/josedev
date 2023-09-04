@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head';
-import { Navbar } from '@/components/common/Navbar';
+import { Navbar } from '@/components/common';
 import '../../src/app/globals.css';
 
 const ContactPage = () => {

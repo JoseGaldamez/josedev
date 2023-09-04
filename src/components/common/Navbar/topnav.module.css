@@ -1,0 +1,28 @@
+.topNavPrincipal {
+    width: 100%;
+    position: fixed;
+    border-top: solid 5px purple;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    height: 90px;
+}
+
+.pointerMouse {
+    width: 30px;
+    height: 30px;
+    background-color: purple;
+    position: absolute;
+    border-radius: 10px;
+    background: rgb(121, 9, 118);
+    background: radial-gradient(circle, rgba(121, 9, 118, 1) 0%, rgba(255, 255, 255, 0) 40%);
+}
+
+/* .topNavPrincipalContainer header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.topNavPrincipalContainer img {
+    margin-left: 10px;
+} */
