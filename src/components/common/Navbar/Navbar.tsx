@@ -1,18 +1,35 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
 
 import style from './topnav.module.css';
 
+const navigation = [
+    { name: 'Proyectos', href: '/projects' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Sobre mi', href: '/about' },
+    { name: 'Contacto', href: '/contact' }
+]
+
+
+
 export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const navigation = [
-        { name: 'Proyectos', href: '/projects' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Sobre mi', href: '/about' },
-        { name: 'Contacto', href: '/contact' }
-    ]
+    const [cursorPosition, setCursorPosition] = useState({ top: -100, left: -100 })
+
+    const handleMouseMove = (e: MouseEvent) => {
+        setCursorPosition({ top: e.screenY - 120, left: e.pageX - 15 });
+    }
+    useEffect(() => {
+
+        document.addEventListener('mousemove', handleMouseMove)
+
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove, true);
+        }
+    }, [])
+
 
     return (
         <div className={style.topNavPrincipal}>
@@ -82,6 +99,7 @@ export const Navbar = () => {
                     </Dialog>
                 </header>
             </div>
+            <div style={{ top: cursorPosition.top, left: cursorPosition.left }} className={style.pointerMouse}></div>
         </div>
     )
 }

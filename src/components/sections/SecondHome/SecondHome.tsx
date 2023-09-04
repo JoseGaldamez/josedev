@@ -20,7 +20,9 @@ export const SecondHomeAbout = () => {
                     Un poco sobre mi...
                 </h3>
                 <p>
-                    Como desarrollador de software, ver como una idea toma forma real y se mejora poco a poco a partir de análisis de negocio y optimización de algoritmos es lo que me gusta hacer. Para lograr los objetivo de un desarrollo varias herramientas entran en juego. Lenguajes de programación, plataformas, servidores, etc. Las siguientes son algunas de las herramientas que sé utilizar:
+                    Programador hondureño, estudiante eterno de desarrollo de software.
+
+                    Como desarrollador de software, ver como una idea toma forma y se mejora poco a poco, es lo que me gusta hacer. Las siguientes son algunas de las herramientas que sé utilizar:
                 </p>
 
                 <ListIcons />
