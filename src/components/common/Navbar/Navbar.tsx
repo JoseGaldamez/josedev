@@ -16,21 +16,6 @@ const navigation = [
 
 export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const [cursorPosition, setCursorPosition] = useState({ top: -100, left: -100 })
-
-    const handleMouseMove = (e: MouseEvent) => {
-        setCursorPosition({ top: e.screenY - 120, left: e.pageX - 15 });
-    }
-    useEffect(() => {
-
-        document.addEventListener('mousemove', handleMouseMove)
-
-        return () => {
-            document.removeEventListener('mousemove', handleMouseMove, true);
-        }
-    }, [])
-
-
     return (
         <div className={style.topNavPrincipal}>
             <div className={style.topNavPrincipalContainer}>
@@ -99,7 +84,6 @@ export const Navbar = () => {
                     </Dialog>
                 </header>
             </div>
-            <div style={{ top: cursorPosition.top, left: cursorPosition.left }} className={style.pointerMouse}></div>
         </div>
     )
 }

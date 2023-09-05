@@ -1,0 +1,109 @@
+.container {
+    padding: 10vh;
+    border-top: solid 1px #ccc;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0px auto;
+    background-color: #f5f5f5;
+}
+
+.container p {
+    padding-bottom: 30px;
+}
+
+.listOfProjectContainer {
+    margin-top: 30px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    z-index: 1;
+}
+
+.h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555;
+    padding-bottom: 30px;
+    font-weight: 100;
+}
+
+.h3 strong {
+    font-weight: bold;
+}
+
+.projects {
+    width: 35%;
+}
+
+.projects ul li {
+    padding: 20px 20px;
+    border-radius: 10px 0px 0px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all ease 500ms;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.selectedProject {
+    font-size: 1rem !important;
+    background-color: purple;
+    color: white;
+}
+
+.unselectedProject:hover {
+    background-color: #f2dff583;
+}
+
+.numberProject {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+
+.projectsDescription {
+    width: 100%;
+    border: solid 1px #ddd;
+    padding: 10px 25px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: white;
+}
+
+.projectsDescription h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    border-bottom: solid 3px purple;
+    padding: 20px;
+}
+
+.projectsDescription p {
+    padding-top: 20px;
+    color: #333;
+}
+
+.listTecnologies {
+    margin-top: 20px;
+}
+
+.listTecnologies span {
+    background-color: #e9e9e9;
+    margin-right: 15px;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+.projectsDescription h5 {
+    display: block;
+    margin-top: 30px;
+}
+
+.projectsDescription a {
+    display: block;
+    color: purple;
+    font-weight: bold;
+    margin: 10px 0px;
+}

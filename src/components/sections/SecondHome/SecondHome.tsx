@@ -17,7 +17,7 @@ export const SecondHomeAbout = () => {
         <div className={style.secondHome}>
             <div className={style.secondSectionContainer}>
                 <h3 className={style.h3}>
-                    Un poco sobre mi...
+                    Un poco <strong>sobre mi</strong>...
                 </h3>
                 <p>
                     Programador hondureño, estudiante eterno de desarrollo de software.
