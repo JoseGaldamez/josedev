@@ -55,6 +55,11 @@ export const Navbar = () => {
                             <div className="flex items-center justify-between">
                                 <Link href="/" className="-m-1.5 p-1.5">
                                     <span className="sr-only">JG</span>
+                                    <img
+                                        className="h-8 w-auto"
+                                        src="https://images.squarespace-cdn.com/content/v1/54cfb0dae4b0f7ee4c645c35/1480807809558-TBCHC3KCS4VQZGOBYO8Q/JG-Logo.png"
+                                        alt=""
+                                    />
                                 </Link>
                                 <button
                                     type="button"
