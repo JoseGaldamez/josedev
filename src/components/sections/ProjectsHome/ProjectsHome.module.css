@@ -107,3 +107,35 @@
     font-weight: bold;
     margin: 10px 0px;
 }
+
+.projectDescriptionImage {
+    width: 100%;
+    text-align: center;
+}
+
+.projectDescriptionImage img {
+    display: block;
+    margin: 0px auto;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.listOfProjectContainerMobile {
+    display: none;
+}
+
+.listOfProjectContainerMobile .projectsDescription {
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+    .listOfProjectContainer {
+        display: none;
+    }
+
+    .listOfProjectContainerMobile {
+        display: block;
+    }
+}
