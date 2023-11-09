@@ -1,17 +1,18 @@
 import React from 'react'
-import Head from 'next/head';
-import { Navbar } from '@/components/common';
-import '../../src/app/globals.css';
 
-const ContactPage = () => {
+import '../../src/app/globals.css';
+import Head from 'next/head';
+import { Navbar } from '@/components/common/Navbar/Navbar';
+
+export const ContactPage = () => {
     return (
         <>
             <Head>
-                <title>Jose Galdamez | Contacto</title>
+                <title>Jose Galdamez | Contact</title>
             </Head>
             <Navbar />
             <main>
-                <h1>Contact</h1>
+
             </main>
         </>
     )

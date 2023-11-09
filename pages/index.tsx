@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { Navbar } from '@/components/common'
-import { TopHome } from '@/components/sections/TopHome/TopHome'
-import { SecondHomeAbout } from '@/components/sections/SecondHome/SecondHome';
-import { ProjectsHome } from '@/components/sections/ProjectsHome/ProjectsHome';
 
 import '../src/app/globals.css';
+import { Navbar } from '@/components/common/Navbar/Navbar';
+import { PrincipalSectionHome } from '@/components/sections/home/PrincipalSectionHome/PrincipalSectionHome';
+import { AboutSectionHome } from '@/components/sections/home/AboutSectionHome/AboutSectionHome';
+import { TechnologiesSectionHome } from '@/components/sections/home/TechnologiesSectionHome/TechnologiesSectionHome';
 
 const HomePage = () => {
     return (
@@ -14,9 +14,9 @@ const HomePage = () => {
             </Head>
             <Navbar />
             <main>
-                <TopHome />
-                <SecondHomeAbout />
-                <ProjectsHome />
+                <PrincipalSectionHome />
+                <AboutSectionHome />
+                <TechnologiesSectionHome />
             </main>
         </>
     )

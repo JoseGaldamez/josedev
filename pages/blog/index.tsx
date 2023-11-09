@@ -1,11 +1,10 @@
 import React from 'react'
-import Head from 'next/head';
-import { Navbar } from '@/components/common';
-import { BlogHome } from '@/components/sections/BlogHome';
 
 import '../../src/app/globals.css';
+import Head from 'next/head';
+import { Navbar } from '@/components/common/Navbar/Navbar';
 
-const BlogPage = () => {
+export const BlogPage = () => {
     return (
         <>
             <Head>
@@ -13,7 +12,7 @@ const BlogPage = () => {
             </Head>
             <Navbar />
             <main>
-                <BlogHome />
+
             </main>
         </>
     )

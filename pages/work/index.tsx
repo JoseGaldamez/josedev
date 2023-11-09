@@ -4,11 +4,11 @@ import '../../src/app/globals.css';
 import Head from 'next/head';
 import { Navbar } from '@/components/common/Navbar/Navbar';
 
-export const ProjectsPage = () => {
+export const WorkPage = () => {
     return (
         <>
             <Head>
-                <title>Jose Galdamez | Projects</title>
+                <title>Jose Galdamez | Work</title>
             </Head>
             <Navbar />
             <main>
@@ -18,4 +18,4 @@ export const ProjectsPage = () => {
     )
 }
 
-export default ProjectsPage;
+export default WorkPage;

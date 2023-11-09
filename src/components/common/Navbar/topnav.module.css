@@ -1,30 +1,22 @@
 .topNavPrincipal {
     width: 100%;
     position: fixed;
-    border-top: solid 5px purple;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #0d1117d6;
     backdrop-filter: blur(5px);
-    height: 90px;
+    height: 60px;
+    padding: 10px;
     z-index: 1;
 }
 
-.pointerMouse {
-    width: 30px;
-    height: 30px;
-    background-color: purple;
-    position: absolute;
-    border-radius: 10px;
-    background: rgb(121, 9, 118);
-    background: radial-gradient(circle, rgba(121, 9, 118, 1) 0%, rgba(255, 255, 255, 0) 40%);
-    filter: blur(5px);
-}
-
-/* .topNavPrincipalContainer header {
-    width: 100%;
-    max-width: 1200px;
+.topNavPrincipalContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1280px;
     margin: 0px auto;
 }
 
-.topNavPrincipalContainer img {
-    margin-left: 10px;
-} */
+.menu {
+    display: flex;
+    padding: 7px;
+}
