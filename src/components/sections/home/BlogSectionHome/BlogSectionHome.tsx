@@ -1,10 +1,10 @@
 import React from 'react'
 
-import styles from './TechnologiesSectionHome.module.css'
-import { IconsTechologiesList } from './IconsTechnologiesList/IconsTechologiesList';
+import styles from './BlogSectionHome.module.css'
+import { BlogList } from './BlogList/BlogList';
 import Link from 'next/link';
 
-export const TechnologiesSectionHome = () => {
+export const BlogSectionHome = () => {
     return (
         <section>
             <div className={styles.technologiesSection}>
@@ -15,9 +15,9 @@ export const TechnologiesSectionHome = () => {
                 <p>
                     Entre las tecnologías y lenguajes que manejo están:
                 </p>
-                <IconsTechologiesList />
+                <BlogList />
                 <div>
-                    <Link href={'/'} className={styles.buttonViewMore} >Ver más</Link>
+                    <Link href={'/'} className={styles.buttonViewMore} >Más artículos</Link>
                 </div>
             </div>
         </section>

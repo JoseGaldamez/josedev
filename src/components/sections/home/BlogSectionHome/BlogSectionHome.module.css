@@ -56,3 +56,11 @@
 .buttonViewMore:hover {
     background-color: #1d2024;
 }
+
+.article {
+    background-color: #24292f;
+    width: 30%;
+    margin: 1%;
+    height: 300px;
+    border-radius: 10px;
+}
