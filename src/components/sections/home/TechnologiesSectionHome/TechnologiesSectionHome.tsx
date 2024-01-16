@@ -17,7 +17,7 @@ export const TechnologiesSectionHome = () => {
                 </p>
                 <IconsTechologiesList />
                 <div>
-                    <Link href={'/'} className={styles.buttonViewMore} >Ver más</Link>
+                    <Link href={'/about'} className={styles.buttonViewMore} >Más sobre mi</Link>
                 </div>
             </div>
         </section>

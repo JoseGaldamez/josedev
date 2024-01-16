@@ -1,0 +1,79 @@
+.aboutTopSection {
+    padding-top: 15vh;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-bottom: 10vh;
+}
+
+.aboutTopSectionLeftImage {
+    width: 20%;
+    margin-right: 5%;
+}
+
+.aboutTopSectionRigthInfo {
+    width: 70%;
+    color: white;
+}
+
+.aboutTopSectionH2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.aboutTopSectionH3 {
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+.aboutTopSectionRigthInfo p {
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.aboutTopSectionRigthInfo p a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: yellow;
+    transition: all ease 1s;
+    text-decoration: none;
+}
+
+.aboutTopSectionRigthInfo p strong {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.aboutTopSectionRigthInfo p a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutTopSection {
+        padding-top: 10vh;
+        max-width: 1200px;
+        margin: 0px auto;
+        display: block;
+        width: 90%;
+    }
+
+    .aboutTopSectionLeftImage {
+        width: 50%;
+    }
+
+    .aboutTopSectionRigthInfo {
+        width: 100%;
+        color: white;
+    }
+
+    .aboutTopSectionH2 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-top: 30px;
+        line-height: 3.5rem;
+    }
+}

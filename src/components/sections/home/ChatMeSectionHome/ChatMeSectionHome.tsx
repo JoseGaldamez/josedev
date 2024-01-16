@@ -12,8 +12,8 @@ export const ChatMeSectionHome = () => {
                 </h2>
                 <div>
                     <div className={styles.buttonsList}>
-                        <Link href={'/information'} className={styles.buttonDark + ' ' + styles.button}>Enviar mensaje</Link>
-                        <Link href={'/information'} className={styles.buttonYellow + ' ' + styles.button}>Correo electrónico</Link>
+                        <Link href={'https://api.whatsapp.com/send?phone=50431751455&text=Hola%20Jos%C3%A9...%20'} className={styles.buttonDark + ' ' + styles.button} target='_blank'>Enviar mensaje</Link>
+                        <Link href={'mailto:josegaldamez1991@gmail.com?subject=Desde%20tu%20web&body=Hola%20Jos%C3%A9...'} className={styles.buttonYellow + ' ' + styles.button}>Correo electrónico</Link>
                     </div>
                 </div>
             </div>

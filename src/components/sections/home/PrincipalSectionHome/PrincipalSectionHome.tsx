@@ -11,6 +11,10 @@ export const PrincipalSectionHome = () => {
     return (
         <section className={styles.principalHomeSection}>
             <div className={styles.leftSectionText}>
+                <div className={styles.leftSectionImage}>
+                    <div></div>
+                    <Image src={JoseGaldamezImage} alt='Jose Galdamez' width={200} height={200} />
+                </div>
                 <div>
                     <h1 className={styles.titleH1}>José Galdámez</h1>
                     <h2 className={styles.titleH2}>Desarrollador Fullstack</h2>

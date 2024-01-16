@@ -9,10 +9,11 @@ import LogoJG from '@/assets/logo-jg.png'
 import style from './topnav.module.css';
 
 const navigation = [
-    { name: 'Trabajo', href: '/work' },
-    { name: 'Proyectos', href: '/projects' },
-    { name: 'Artículos', href: '/blog' },
-    { name: 'Contacto', href: '/contact' }
+    { name: 'Acerca de', href: '/about' },
+    // { name: 'Trabajo', href: '/work' },
+    // { name: 'Proyectos', href: '/projects' },
+    // { name: 'Artículos', href: '/blog' },
+    // { name: 'Contacto', href: '/contact' }
 ]
 
 

@@ -12,6 +12,9 @@
     width: 50%;
     padding-top: 20px;
 }
+.leftSectionImage {
+    display: none;
+}
 
 .rightSectionImage {
     width: 350px;
@@ -48,4 +51,82 @@
 .iconsNetwork img:hover {
     opacity: 1;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 975px) {
+    .principalHomeSection {
+        padding-top: 15vh;
+        padding-bottom: 5vh;
+        width: 90%;
+    }
+    .titleH1 {
+        font-size: 5rem;
+        color: white;
+        font-weight: bolder;
+        line-height: 5rem;
+        padding-bottom: 30px;
+    }
+
+    .titleH2 {
+        font-size: 2rem;
+        font-weight: lighter;
+        line-height: 2.5rem;
+        padding-bottom: 40px;
+        border-bottom: solid 1px #555;
+    }
+
+    .rightSectionImage {
+        width: 300px;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .principalHomeSection {
+        padding-top: 10vh;
+        padding-bottom: 5vh;
+        width: 95%;
+        max-width: 1200px;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .leftSectionText {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .rightSectionImage {
+        display: none;
+    }
+    .leftSectionImage {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .titleH1 {
+        font-size: 3.5rem;
+        color: white;
+        font-weight: bolder;
+        line-height: 3.5rem;
+        padding-bottom: 20px;
+    }
+
+    .titleH2 {
+        font-size: 2rem;
+        font-weight: lighter;
+        line-height: 2.5rem;
+        padding-bottom: 40px;
+        border-bottom: solid 1px #555;
+    }
+
+    .iconsNetwork {
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

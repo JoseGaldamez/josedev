@@ -49,3 +49,28 @@
 .buttonYellow {
     background-color: #fcd740;
 }
+
+@media only screen and (max-width: 570px) {
+    .buttonsAbout {
+        display: block;
+        margin-top: 50px;
+    }
+
+    .aboutContent div p {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 200;
+        padding: 0px 10%;
+    }
+
+    .button {
+        display: block;
+        margin: 20px auto;
+        width: 250px;
+        padding: 15px;
+        font-weight: bold;
+        border-radius: 50px;
+        opacity: 0.7;
+        transition: all ease 500ms;
+    }
+}

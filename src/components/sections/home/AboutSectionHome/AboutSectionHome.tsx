@@ -12,11 +12,11 @@ export const AboutSectionHome = () => {
                         <h2 className='h2 text-white'>Acerca de</h2>
                         <div className='line line-white'></div>
                         <p>
-                            Desarrollador de Software con experiencia en desarrollo de aplicaciones web y móviles usando tecnologías modernas y metodología ágiles. Convertir una idea en una aplicaciones que permite solucionar problemas es mi pasión.
+                            Desarrollador de Software con experiencia en desarrollo de aplicaciones web y móviles usando tecnologías modernas y metodología ágiles. Convertir una idea en una aplicación que permite solucionar problemas reales, es mi pasión.
                         </p>
                         <div className={styles.buttonsAbout}>
-                            <Link href={'/information'} className={styles.buttonWhite + ' ' + styles.button}>Descargar currículum</Link>
-                            <Link href={'/information'} className={styles.buttonYellow + ' ' + styles.button}>Más información</Link>
+                            <Link href={'/api/files/download-cv'} download={true} className={styles.buttonWhite + ' ' + styles.button}>Descargar currículum</Link>
+                            <Link href={'/about'} className={styles.buttonYellow + ' ' + styles.button}>Más información</Link>
                         </div>
                     </div>
                 </div>

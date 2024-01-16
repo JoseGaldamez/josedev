@@ -36,3 +36,16 @@
 .buttonYellow {
     background-color: white;
 }
+
+@media only screen and (max-width: 570px) {
+    .buttonsList {
+        display: block;
+        margin-top: 50px;
+    }
+
+    .button {
+        display: block;
+        margin: 20px auto;
+        width: 250px;
+    }
+}

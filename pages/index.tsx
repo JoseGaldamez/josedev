@@ -20,7 +20,7 @@ const HomePage = () => {
                 <AboutSectionHome />
                 <TechnologiesSectionHome />
                 <ChatMeSectionHome />
-                <BlogSectionHome />
+
             </main>
         </>
     )
