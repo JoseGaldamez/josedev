@@ -8,8 +8,6 @@ import Facebook from '@/icons/facebook.png';
 import Youtube from '@/icons/youtube.png';
 import Linkedin from '@/icons/linkedin.png';
 
-import styles from '../PrincipalSectionHome.module.css';
-
 const listIcons = [
     {
         url: "https://github.com/JoseGaldamez",
@@ -35,11 +33,11 @@ const listIcons = [
 
 export const IconsList = () => {
     return (
-        <div className={styles.iconsNetwork}>
+        <div className='flex gap-5 my-16'>
 
             {listIcons.map((icon, index) => {
                 return <Link key={index} href={icon.url} target='_blank' >
-                    <Image src={icon.image} width={30} height={30} alt={icon.alt} />
+                    <Image className='opacity-40 hover:opacity-100 transition-opacity' src={icon.image} width={30} height={30} alt={icon.alt} />
                 </Link>
             })}
 
