@@ -2,6 +2,7 @@ import React from 'react'
 import { AboutDescription, TopHomeSection } from '../components/sections';
 import { Metadata } from 'next';
 import { IconsList } from '@/components/common/icon_list/IconsList';
+import { IAQuestions } from '@/components/sections/question/Questions';
 
 export const metadata: Metadata = {
     title: 'Josá Galdámez | Fullstack Developer',
@@ -15,6 +16,7 @@ const IndexHome = () => {
             <TopHomeSection />
             <AboutDescription />
             <IconsList />
+            <IAQuestions />
         </div>
     )
 }
