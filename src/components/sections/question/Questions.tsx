@@ -19,6 +19,8 @@ export const IAQuestions = () => {
     }
 
     const askingRequest = () => {
+        if (question === '') return;
+
         setLoading(true);
         setResponse('');
 
@@ -51,9 +53,9 @@ export const IAQuestions = () => {
             <h2 className='text-2xl font-bold pb-4 tracking-wide'>¿Quieres saber algo sobre mí?</h2>
             <p className='text-lg text-gray-600'>Pregunta lo que quieras, mi asistente con inteligencia artificial te ayudará respondiento todo lo que necesites saber.</p>
 
-            <form className='relative mt-5' onSubmit={handleSubmit}>
+            <form className='relative mt-5 mb-5' onSubmit={handleSubmit}>
 
-                <input required placeholder='Ejemplo: ¿qué experiencia laboral tiene?' onChange={(input) => setQuestion(input.target.value)} type="text" value={question} className='block w-full p-4 border rounded-lg sm:text-md bg-gray-900 focus:ring-blue-500 focus:border-blue-500 border-gray-600 placeholder-gray-400 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' />
+                <input required placeholder='Ejemplo: ¿qué experiencia laboral tiene?' onChange={(input) => setQuestion(input.target.value)} type="text" value={question} className='block w-full p-4 pr-8 border rounded-lg sm:text-md bg-gray-900 focus:ring-blue-500 focus:border-blue-500 border-gray-600 placeholder-gray-400 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' />
                 <div className="absolute inset-y-0 end-0 flex items-center pr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4 text-gray-500 cursor-pointer hover:text-gray-300" onClick={handleClickSend}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
@@ -62,7 +64,9 @@ export const IAQuestions = () => {
             </form>
             {
                 response !== '' && (
-                    <article className='mt-5 text-lg border-s border-gray-800 pl-5 ml-2'>
+                    <article className='mt-5 text-base border-l-2 border-gray-800 pl-8 animate-in ml-2 relative'>
+                        <span className="text-gray-400 absolute rounded-full -left-2 -top-5 text-4xl"> •</span>
+                        <span className="text-gray-400 absolute rounded-full -left-2 -bottom-5 text-4xl"> •</span>
                         <span className=' text-gray-400'>
                             {response}
                         </span>

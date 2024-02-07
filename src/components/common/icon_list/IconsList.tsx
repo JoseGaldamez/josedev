@@ -37,7 +37,7 @@ export const IconsList = () => {
 
             {listIcons.map((icon, index) => {
                 return <Link key={index} href={icon.url} target='_blank' >
-                    <Image className='opacity-40 hover:opacity-100 transition-opacity' src={icon.image} width={30} height={30} alt={icon.alt} />
+                    <Image className='opacity-40 w-auto h-auto hover:opacity-100 transition-opacity' src={icon.image} width={30} height={30} alt={icon.alt} />
                 </Link>
             })}
 
