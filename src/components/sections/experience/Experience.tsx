@@ -13,7 +13,7 @@ export const Experience = () => {
 
             {
                 experienceInfo.map(work => {
-                    return <ArticleExperience work={work} />
+                    return <ArticleExperience key={work.place} work={work} />
                 })
             }
 

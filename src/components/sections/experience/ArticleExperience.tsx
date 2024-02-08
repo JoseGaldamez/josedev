@@ -31,10 +31,10 @@ export const ArticleExperience = ({ work }: IWork) => {
             </main>
             {
                 work.tecnologies && (
-                    <footer className='flex gap-2 mt-5'>
+                    <footer className='flex gap-2 mt-5 flex-wrap'>
                         {
-                            work.tecnologies.map(tecnology => {
-                                return <span className="inline-flex items-center rounded-md bg-blue-950/30 px-3 py-0 text-xs font-medium text-gray-200 ring-1 ring-inset ring-gray-500/10">
+                            work.tecnologies.map((tecnology, index) => {
+                                return <span key={index} className="inline-flex items-center rounded-md bg-blue-950/30 px-3 py-0 text-xs font-medium text-gray-200 ring-1 ring-inset ring-gray-500/10">
                                     <span className="text-blue-600 rounded-full text-xl mr-1">
                                         •
                                     </span>

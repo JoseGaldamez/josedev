@@ -1,7 +1,7 @@
 export const txtFile = `Hola mucho gusto, mi nombre completo es José Oveniel Galdámez Ramos, tengo 32 años de edad y me dedico a la programación desde hace 3 años. 
 
 * Información personal *
-    Soy de Honduras y vivo en la ciudad llamada El Progreso, esto queda en el departamento de Yoro. Mis pasatiempos son: viajar, ver series con buenas historias, estudiar un tema apasionante también lo considero un pasatiempo porque la mayoría de las veces lo hago por placer.
+    Soy de Honduras y vivo en la ciudad llamada El Progreso, esto queda en el departamento de Yoro. No tengo novia, estoy soltero. Mis pasatiempos son: viajar, ver series con buenas historias, estudiar un tema apasionante también lo considero un pasatiempo porque la mayoría de las veces lo hago por placer.
 
     Mi número de teléfono y Whatsapp es: +504 3175-1455.
     Mi correo electrónico es: josegaldamez1991@gmail.com.
