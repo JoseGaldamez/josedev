@@ -21,7 +21,7 @@ interface IWork {
 
 export const ArticleExperience = ({ work }: IWork) => {
     return (
-        <article className={`w-full border-x-blue-500/20 border-l-4 pl-5 ml-3 ${!work.lastItem ? 'pb-20' : 'pb-5'} relative`}>
+        <article className={`w-full border-x-blue-500/20 border-l-4 pl-5 ${!work.lastItem ? 'pb-20' : 'pb-5'} relative`}>
             <span className="text-yellow-400 absolute rounded-full -left-4 -top-7 text-7xl">•</span>
             <header className='flex justify-between items-center -top-2 pt-1 relative'>
                 <TitleArticleExperience place={work.place} link={work.link} position={work.position} />

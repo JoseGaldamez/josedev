@@ -20,7 +20,7 @@ interface Iproject {
 
 export const ArticleProject = ({ project }: Iproject) => {
     return (
-        <article className='flex flex-col sm:flex-row gap-4 items-center justify-between py-14 border-b-2 border-blue-900/10'>
+        <article className='flex flex-col sm:flex-row gap-4 items-center justify-between py-14 border-b-4 border-blue-900/20'>
             <figure className='w-full sm:w-2/4 rounded-xl overflow-hidden'>
                 <a href={project.url} target='_blank' title='Abrir iTiny.link'>
                     <Image className='w-full opacity-60 cursor-pointer hover:opacity-100 hover:scale-110 transition-all' src={project.image} alt="iTiny Link" />
