@@ -14,11 +14,15 @@ export default function RootLayout({
       <head>
         <meta property="og:title" content="Josá Galdámez | Fullstack Developer" />
         <meta property="og:description" content="Desarrollador de aplicaciones web y móviles" />
-        <meta property="og:image" content="https://avatars.githubusercontent.com/JoseGaldamez" />
+        <meta property="og:image" content="./jose-portada.jpg" />
+
+        <link rel="preload" as="image" href="./jose-portada.jpg"></link>
+
+        <meta property="image" content="./jose-portada.jpg" />
 
         <meta name="twitter:title" content="Josá Galdámez | Fullstack Developer" />
         <meta name="twitter:description" content="Desarrollador de aplicaciones web y móviles" />
-        <meta name="twitter:image" content="https://avatars.githubusercontent.com/JoseGaldamez" />
+        <meta name="twitter:image" content="./jose-portada.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body className={inter.className + " relative text-white"}>
