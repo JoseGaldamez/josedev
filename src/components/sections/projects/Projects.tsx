@@ -1,7 +1,8 @@
-import { ArrowRightIcon, ArrowTopRightOnSquareIcon, CodeBracketIcon, LinkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
 import React from 'react'
+import { CodeBracketIcon } from '@heroicons/react/24/outline'
 import { ArticleProject } from './ArticleProject'
+
+import { projectsList } from '@/utils/projects'
 
 
 
@@ -18,7 +19,11 @@ export const Projects = () => {
             </p>
 
             <ul>
-                <ArticleProject />
+                {
+                    projectsList.map((project, index) => {
+                        return <ArticleProject project={project} key={index} />
+                    })
+                }
             </ul>
 
         </section>
