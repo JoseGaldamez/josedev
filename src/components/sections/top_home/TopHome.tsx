@@ -1,11 +1,12 @@
 import { CodeBracketIcon } from '@heroicons/react/20/solid'
-import React from 'react'
+import Jose from '@/assets/JoseGaldamez.png';
+import Image from 'next/image';
 
 export const TopHomeSection = () => {
     return (
         <div className='my-10'>
             <div>
-                <img className='w-32 rounded-full' src="https://avatars.githubusercontent.com/JoseGaldamez" alt="José Galdámez" />
+                <Image className='w-32 rounded-full' width={128} height={128} src={Jose} alt="José Galdámez" />
             </div>
             <div className='my-8'>
                 <h2 className='text-3xl text-white py-3'>Hola mundo, soy

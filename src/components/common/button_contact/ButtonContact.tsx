@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/alert-dialog"
 
 import { ArrowTopRightOnSquareIcon, EnvelopeOpenIcon, ChatBubbleOvalLeftEllipsisIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { OthersContact } from './OthersContact';
+import { FormContact } from './FormContact';
 
 export const ButtonContact = () => {
     return (
@@ -23,27 +25,17 @@ export const ButtonContact = () => {
             </AlertDialogTrigger>
             <AlertDialogContent className="bg-dark bg-gray-950">
                 <AlertDialogHeader>
-                    <AlertDialogTitle className="text-white text-2xl">Elige la que prefieras.</AlertDialogTitle>
-                    <AlertDialogDescription>
-                        Puedes contactar conmigo de muchas maneras, las más rápidas serían:
-                        <span className='py-5 text-white tracking-wider'>
-                            <li className='hidden sm:block'>
-                                <a className='rounded-lg flex items-center gap-2 py-3 px-3 my-3 bg-slate-800' href="mailto:josegaldamez1991@gmail.com?subject=Desde%20tu%20web&body=Hola%20Jos%C3%A9..."><EnvelopeOpenIcon className='w-5' /> Correo: <strong>josegaldamez1991@gmail.com</strong> <ArrowTopRightOnSquareIcon className='w-5' /> </a>
-                            </li>
-                            <li className='block sm:hidden'>
-                                <a className='rounded-lg flex items-center gap-2 py-3 px-3 my-3 bg-slate-800' href="mailto:josegaldamez1991@gmail.com?subject=Desde%20tu%20web&body=Hola%20Jos%C3%A9..."><EnvelopeOpenIcon className='w-5' /> <strong>josegaldamez1991@gmail.com</strong> <ArrowTopRightOnSquareIcon className='w-5' /> </a>
-                            </li>
-                            <li className='hidden sm:block'>
-                                <a className='rounded-lg flex items-center gap-2 py-3 px-3 my-3 bg-slate-800' href="https://api.whatsapp.com/send?phone=50431751455&text=Hola%20Jos%C3%A9...%20" target='_blank'><ChatBubbleOvalLeftEllipsisIcon className='w-5' /> WhatsApp: <strong>+504 3175-1455</strong> <ArrowTopRightOnSquareIcon className='w-5' /> </a>
-                            </li>
-                            <li className='block sm:hidden'>
-                                <a className='rounded-lg flex items-center gap-2 py-3 px-3 my-3 bg-slate-800' href="https://api.whatsapp.com/send?phone=50431751455&text=Hola%20Jos%C3%A9...%20" target='_blank'><ChatBubbleOvalLeftEllipsisIcon className='w-5' /> <strong>+504 3175-1455</strong> <ArrowTopRightOnSquareIcon className='w-5' /> </a>
-                            </li>
-                        </span>
+                    <AlertDialogTitle className="text-white text-2xl">Escribeme un mensaje.</AlertDialogTitle>
+                    <AlertDialogDescription asChild>
+                        <div>
+                            <FormContact />
+                            <OthersContact />
+                        </div>
+
                     </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                    <AlertDialogAction>Listo</AlertDialogAction>
+                    <AlertDialogAction className='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900'>Listo</AlertDialogAction>
                 </AlertDialogFooter>
             </AlertDialogContent>
         </AlertDialog>

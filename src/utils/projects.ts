@@ -1,5 +1,5 @@
-import ITinyLinkImage from "@/assets/itiny-link.jpg";
-import RadioProgresoLinkImage from "@/assets/radio-pogreso.jpg";
+import ITinyLinkImage from "@/assets/itiny-link.png";
+import RadioProgresoLinkImage from "@/assets/radio-pogreso.png";
 
 export const projectsList = [
     {
