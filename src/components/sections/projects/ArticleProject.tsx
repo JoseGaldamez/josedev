@@ -35,17 +35,17 @@ export const ArticleProject = ({ project }: Iproject) => {
                         <LinkIcon className='w-4 h-4 ml-2' />
                     </h3>
                 </a>
-                <div className='flex flex-wrap my-4 gap-2'>
+                <ul className='flex flex-wrap my-4 gap-2'>
                     {
                         project.tecnologies.map((tecnology, index) => {
                             return (
-                                <span className="inline-flex gap-1 items-center rounded-full bg-black/30 border border-black  px-3 py-1 text-xs text-gray-200">
+                                <li key={index} className="inline-flex gap-1 items-center rounded-full bg-black/30 border border-black  px-3 py-1 text-xs text-gray-200">
                                     {tecnology}
-                                </span>
+                                </li>
                             )
                         })
                     }
-                </div>
+                </ul>
                 <p>
                     {
                         project.description

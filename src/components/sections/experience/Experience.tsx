@@ -11,11 +11,13 @@ export const Experience = () => {
                 <BriefcaseIcon className='w-8 h-8 mr-3' />
                 <span className='pt-1'>Experiencia laboral</span></h2>
 
-            {
-                experienceInfo.map(work => {
-                    return <ArticleExperience key={work.place} work={work} />
-                })
-            }
+            <ul>
+                {
+                    experienceInfo.map((work, index) => {
+                        return <ArticleExperience key={index} work={work} />
+                    })
+                }
+            </ul>
 
         </section>
     )

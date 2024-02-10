@@ -51,7 +51,7 @@ export const IAQuestions = () => {
         <section className='mt-10 w-full bg-gray-950 border-gray-900 border p-5 rounded-lg backdrop-blur-sm'>
 
             <h2 className='text-2xl font-bold pb-4 tracking-wide'>¿Quieres saber algo sobre mí?</h2>
-            <p className='text-lg text-gray-600'>Pregunta lo que quieras, mi asistente con inteligencia artificial te ayudará respondiento todo lo que necesites saber.</p>
+            <p className='text-lg text-gray-400'>Pregunta lo que quieras, mi asistente con inteligencia artificial te ayudará respondiento todo lo que necesites saber.</p>
 
             <form className='relative mt-5 mb-5' onSubmit={handleSubmit}>
 
