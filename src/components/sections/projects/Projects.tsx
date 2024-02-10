@@ -21,11 +21,10 @@ export const Projects = () => {
             <ul>
                 {
                     projectsList.map((project, index) => {
-                        return <ArticleProject project={project} key={index} />
+                        return <ArticleProject project={project} key={project.name} />
                     })
                 }
             </ul>
-
         </section>
     )
 }
