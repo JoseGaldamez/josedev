@@ -78,3 +78,43 @@
 li {
   list-style: none;
 }
+
+.input-question-animated {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+}
+
+.input-question-animated:focus {
+  animation: rotateShadow 1s infinite linear;
+}
+
+@keyframes rotateShadow {
+  0% {
+    box-shadow:
+      -2px -2px 4px -3px #599001,
+      2px 2px 4px -3px #674bcd;
+  }
+  25% {
+    box-shadow:
+      -2px 2px 4px -3px #599001,
+      2px -2px 4px -3px #674bcd;
+  }
+  50% {
+    box-shadow:
+      2px 2px 4px -3px #599001,
+      -2px -2px 4px -3px #674bcd;
+  }
+  75% {
+    box-shadow:
+      2px -2px 4px -3px #599001,
+      -2px 2px 4px -3px #674bcd;
+  }
+  100% {
+    box-shadow:
+      -2px -2px 4px -3px #599001,
+      2px 2px 4px -3px #674bcd;
+  }
+}
