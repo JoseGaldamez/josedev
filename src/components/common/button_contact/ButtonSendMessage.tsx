@@ -1,11 +1,10 @@
-import { useState } from 'react';
-
 interface IButtonSendContact {
     sending: boolean,
+    disable: boolean,
     sendMessage: () => void
 }
 
-export const ButtonSendMessage = ({ sendMessage, sending }: IButtonSendContact) => {
+export const ButtonSendMessage = ({ sendMessage, sending, disable }: IButtonSendContact) => {
 
     return (
         <div>
@@ -17,7 +16,7 @@ export const ButtonSendMessage = ({ sendMessage, sending }: IButtonSendContact) 
                     </svg>
                     Enviando...
                 </button>) : (
-                    <button type="button" onClick={sendMessage} className="w-full flex text-center py-2.5 px-5 me-2 mt-4 text-base font-medium rounded-lg bg-blue-800 hover:bg-blue-900 transition-all text-gray-200 justify-center items-center">
+                    <button disabled={disable} type="button" onClick={sendMessage} className="w-full flex text-center py-2.5 px-5 me-2 mt-4 text-base font-medium rounded-lg bg-blue-800 hover:bg-blue-900 transition-all text-gray-200 justify-center items-center disabled:bg-gray-700 disabled:text-gray-500">
                         Enviar mensaje
                     </button>
                 )

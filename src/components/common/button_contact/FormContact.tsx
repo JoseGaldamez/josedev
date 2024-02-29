@@ -4,6 +4,7 @@ import { ButtonSendMessage } from './ButtonSendMessage'
 export const FormContact = () => {
 
     const [message, setMessage] = useState<string>('')
+    const [email, setEmail] = useState<string>('')
     const [sending, setSending] = useState<boolean>(false);
     const [sent, setSent] = useState<boolean>(false);
 
@@ -13,13 +14,13 @@ export const FormContact = () => {
     }
 
     const sendMessage = async () => {
-        if (message === '') return;
+        if (message === '' || email === '') return;
         setSending(true);
 
         try {
             const responseMessage = await fetch('api/messages', {
                 method: 'POST',
-                body: JSON.stringify({ message: `*WEB*: ${message}` })
+                body: JSON.stringify({ message: `*Mensaje desde la web*\nCorreo:${email}\n\nMensaje: ${message}` })
             })
 
             await responseMessage.json();
@@ -50,9 +51,13 @@ export const FormContact = () => {
                 ) : (
 
                     <form className="w-full" onSubmit={handleSubmit}>
-                        <label htmlFor="message" className="block mb-2 text-sm font-medium">Este mensaje llegará directamente a mi Whatsapp. No olvides agrega tu nombre y forma de contacto. </label>
+                        <label htmlFor="message" className="block mb-2 text-sm font-medium">Este mensaje llegará directamente a mi Correo. </label>
+
+                        <input onChange={(value) => setEmail(value.target.value)} type="text" id='email' name='email' placeholder='Tu correo o whatsapp' className='block p-2.5 w-full text-sm rounded-lg bg-gray-700 mb-2 text-white placeholder-gray-400' />
+
                         <textarea value={message} onChange={(value) => setMessage(value.target.value)} id="message" rows={4} className="block p-2.5 w-full text-sm rounded-lg bg-gray-700 placeholder-gray-400 text-white border-none border-gray-700" placeholder="Escribe tu mensaje..." />
-                        <ButtonSendMessage sending={sending} sendMessage={sendMessage} />
+
+                        <ButtonSendMessage disable={message === '' || email === ''} sending={sending} sendMessage={sendMessage} />
                     </form>
                 )
             }
