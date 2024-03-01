@@ -6,7 +6,7 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-        user: "josegaldamez@codigocorrecto.com", // your domain email address
+        user: process.env.EMAIL_USERNAME, // your domain email address
         pass: process.env.EMAIL_PASSWORD, // your password
     },
 });
@@ -16,8 +16,8 @@ export const sendMessage = async (
     response: NextApiResponse
 ) => {
     const messageOptions = {
-        from: '"JoseGaldamezDev Website" <josegaldamez@codigocorrecto.com>',
-        to: "josegaldamez1991@gmail.com",
+        from: `"JoseGaldamezDev" <${process.env.EMAIL_USERNAME}>`,
+        to: process.env.EMAIL_TO,
         subject: "Message from JoseGaldamezDev Website.",
         text: mesageBody,
     };
