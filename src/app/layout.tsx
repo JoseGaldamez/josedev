@@ -29,9 +29,7 @@ export default function RootLayout({
         <div className='min-h-screen w-full bg-gray-950 bg-[radial-gradient(ellipse_90%_100%_at_-40%_50%,rgba(5,120,150,0.2),rgba(255,255,255,0.0))] '>
           <div className='fixed w-1 h-full top-96 right-0 bg-yellow-500'></div>
           <div className='fixed w-1 h-full top-0 left-0 bg-yellow-500'></div>
-
           <div id="particle-container"></div>
-
           <header>
             <Navbar />
           </header>
