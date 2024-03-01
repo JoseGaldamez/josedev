@@ -20,7 +20,7 @@ export const FormContact = () => {
         try {
             const responseMessage = await fetch('api/messages', {
                 method: 'POST',
-                body: JSON.stringify({ message: `*Mensaje desde la web*\nCorreo:${email}\n\nMensaje: ${message}` })
+                body: JSON.stringify({ message: `*Mensaje desde la web*\nCorreo: ${email}\n\nMensaje: ${message}` })
             })
 
             await responseMessage.json();
