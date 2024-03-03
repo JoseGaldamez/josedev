@@ -6,7 +6,6 @@ import { IconsList } from '@/components/common/icon_list/IconsList';
 export const metadata: Metadata = {
     title: 'Josá Galdámez | Fullstack Developer',
     description: 'Desarrollador de aplicaciones web y móviles',
-
 }
 
 
