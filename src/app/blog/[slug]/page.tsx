@@ -5,13 +5,18 @@ import './simple-post.css';
 
 export const metadata: Metadata = {
     title: '',
+    description: '',
+    openGraph: {
+        images: ''
+    }
 }
 
 const SinglePost = ({ params }: { params: { slug: string } }) => {
     const articleSelected = articlesList.find(article => article.link === `/blog/${params.slug}/`);
     metadata.title = articleSelected?.title || "Artículo no encontrado";
+    metadata.description = articleSelected?.description || "";
     metadata.openGraph = {
-        images: articleSelected?.image ? [{ url: articleSelected?.image }] : [],
+        images: articleSelected?.image ? articleSelected?.image : [],
     }
 
     return (
