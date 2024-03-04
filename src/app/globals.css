@@ -82,6 +82,7 @@ li {
 .input-question-animated {
   border: none;
   padding: 10px;
+  padding-right: 35px;
   border-radius: 5px;
   outline: none;
   color: white;

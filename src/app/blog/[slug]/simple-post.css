@@ -1,0 +1,39 @@
+p {
+    margin-bottom: 1.5rem;
+}
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #f3f4f6;
+    font-weight: 600;
+}
+figure {
+    overflow: hidden;
+    border-radius: 10px;
+}
+figcaption {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.image-single-post {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.image-single-post:hover {
+    transform: scale(1.05);
+}
+
+.link-single-post {
+    color: yellow;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+}
