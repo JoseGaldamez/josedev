@@ -4,8 +4,8 @@ export const CardArticle = ({ title, image, link, description, date, category }:
     return (
         <article className="bg-slate-900 rounded-lg overflow-hidden">
             <a href={link}>
-                <div className="w-full h-48 overflow-hidden">
-                    <img src={image} alt={title} className="w-full h-48 object-cover hover:scale-105 opacity-100 hover:opacity-80 transition duration-300 ease-in-out" />
+                <div className="w-full aspect-video overflow-hidden">
+                    <img src={image} alt={title} className="w-full object-cover hover:scale-105 opacity-100 hover:opacity-80 transition duration-300 ease-in-out" />
                 </div>
                 <div className="px-3 py-5">
                     <div className="pb-4 flex justify-between">

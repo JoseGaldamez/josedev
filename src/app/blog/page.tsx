@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 const BlogPage = () => {
     return (
         <>
-            <h1 className="text-2xl py-5">Artículos recientes</h1>
+            <h1 className="mt-10 md:mt-1 text-2xl py-5">Artículos recientes</h1>
             <div className="border-t border-white py-5"></div>
-            <section className="grid grid-cols-2 gap-4">
+            <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {
                     articlesList.map((article, index) => (
                         <CardArticle key={index} {...article} />
