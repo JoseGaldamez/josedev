@@ -5,7 +5,7 @@ export const articlesList: CardArticleProps[] = [
         title: "¿Qué es lo más difícil de ser programador?",
         description:
             "En este artículo hablaremos sobre los retos que enfrentamos los programadores en el día a día...",
-        image: "https://www.codigocorrecto.com/wp-content/uploads/2024/02/programador_estresado-e1708283136934-870x570.jpeg",
+        image: "https://img.freepik.com/fotos-premium/desarrollador-estresado-exceso-trabajo-programando-codigo-html-computadora-portatil-multiples-monitores-trabajando-estres-despues-horas-programador-aplicaciones-masculino-que-siente-frustrado-cansado-codificar-secuencias-comandos-datos_482257-59027.jpg",
         link: "/blog/que-es-lo-mas-dificil-de-ser-programador/",
         date: "02 de Marzo, 2021",
         category: "Programación",
@@ -65,7 +65,7 @@ export const articlesList: CardArticleProps[] = [
         title: "Elon Musk anunció que NeuraLink implantó el primer chip en un cerebro humano",
         description:
             "El magnate técnologico y multimillonario Elon Musk publicó recientemente que su empresa Neuralink ha logrado...",
-        image: "https://www.codigocorrecto.com/wp-content/uploads/2024/02/Neuralink-Elon-Musk-870x570.jpg",
+        image: "https://media.npr.org/assets/img/2024/01/30/brain-implant-neuralink_wide-8e0b63a768381c143179c6f2a6c0c49ce394c98d.jpg?s=1400&c=100&f=jpeg",
         link: "/blog/elon-musk-anuncio-que-neuralink-implanto-el-primer-chip-en-un-cerebro-humano-persona/",
         date: "01 de Marzo, 2021",
         category: "Noticias",
