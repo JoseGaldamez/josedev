@@ -74,6 +74,9 @@
     @apply bg-background text-foreground;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 li {
   list-style: none;
@@ -117,5 +120,24 @@ li {
     box-shadow:
       -2px -2px 4px -3px #599001,
       2px 2px 4px -3px #674bcd;
+  }
+}
+
+/* Scroll infinite of technologies */
+
+.tecnologies-carrucel {
+  animation-name: tecnologiesScroll;
+  animation-duration: 180s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes tecnologiesScroll {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-90%);
   }
 }

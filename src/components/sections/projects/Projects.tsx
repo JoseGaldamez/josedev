@@ -8,14 +8,15 @@ import { projectsList } from '@/utils/projects'
 
 export const Projects = () => {
     return (
-        <section className='mt-36'>
-            <h2 className='text-2xl font-bold tracking-wide flex items-center mb-5'>
+        <div className='p-14'>
+            <h2 className='text-2xl text-gray-600 font-bold tracking-wide flex items-center mb-5'>
                 <CodeBracketIcon className='w-8 h-8 mr-3' />
                 Proyectos
             </h2>
+            <hr />
 
-            <p className='text-gray-400'>
-                Por motivos de confidencialidad no puedo compartir los proyectos que he desarrollado para clientes coorporativos. Pero aquí dejo algunos que si puedo mostrar.
+            <p className='text-gray-400 my-5'>
+                Por motivos de confidencialidad no puedo compartir los proyectos que he desarrollado para clientes coorporativos como Walmart por ejemplo. Pero aquí dejo algunos que si puedo mostrar.
             </p>
 
             <ul>
@@ -25,6 +26,6 @@ export const Projects = () => {
                     })
                 }
             </ul>
-        </section>
+        </div>
     )
 }

@@ -1,4 +1,4 @@
-import { CardArticle } from "@/components/blog/CardArticle"
+import { CardArticle } from "@/components"
 import { articlesList } from "@/data/testArticlds.data"
 import { Metadata } from "next"
 
