@@ -22,7 +22,7 @@ export const Navbar = () => {
                         <Link href={'/contact'}>Contacto</Link>
                     </li>
                     <li className='bg-slate-800 text-white px-2 py-1 rounded-lg'>
-                        <Link href={'/resume'}>Descargar CV</Link>
+                        <a href={'/JoseGaldamez_CV.pdf'} download={'JoseGaldamez_CV.pdf'}>Descargar CV</a>
                     </li>
                 </ul>
             </menu>

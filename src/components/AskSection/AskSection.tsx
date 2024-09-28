@@ -2,7 +2,7 @@ import React from 'react'
 import { InputQuestion } from './InputQuestion'
 export const AskSection = () => {
     return (
-        <div className='w-full p-20 py-36 text-center bg-slate-100'>
+        <div className='w-full p-20 py-14 lg:py-24 2xl:py-36 text-center bg-slate-100'>
             <div className='max-w-4xl mx-auto'>
                 <h1 className='text-7xl font-bold text-gray-800 mt-16'>
                     <span className='font-light'>Soy</span> José Galdámez

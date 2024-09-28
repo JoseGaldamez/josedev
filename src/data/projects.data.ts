@@ -34,15 +34,4 @@ export const listProjects: IProject[] = [
         tecnologies: ["Flutter", "Firebase", "Node JS"],
         github: "",
     },
-    {
-        id: 4,
-        name: "CompressImages",
-        image: "https://www.shareicon.net/data/2015/05/06/34356_video_400x400.png",
-        title: "Aplicación Web para Comprimir Imágenes",
-        description:
-            "Este ha sido un proyecto personal que realicé hace un tiempo mientras aprendía ReactJS. Es una aplicación excusivamente de frontend, la compresión se realiza de la forma más agresiva posible. ",
-        url: "https://josegaldamez.github.io/compressor/",
-        tecnologies: ["ReactJS", "Librerías Javascript"],
-        github: "https://github.com/JoseGaldamez/AndroidApp-RadioProgreso",
-    },
 ];

@@ -4,10 +4,10 @@ import React from 'react'
 
 export const AboutMe = () => {
     return (
-        <div className='max-w-6xl mx-auto mt-48 mb-32'>
+        <div className='max-w-6xl px-10 2xl:px-0 mx-auto mt-48 mb-32'>
 
-            <div className='flex justify-between'>
-                <div className='w-5/12'>
+            <div className='block w-full sm:flex justify-between'>
+                <div className='w-full sm:w-5/12 mb-24'>
                     <div className='w-full rounded-2xl overflow-hidden mt-5'>
                         <iframe width="100%" height="280" src="https://www.youtube.com/embed/q4vNwBUshKI?si=e0xCH4YJwTR4hAps" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
@@ -18,7 +18,7 @@ export const AboutMe = () => {
                         <span>Ver en Udemy</span> <ArrowTopRightOnSquareIcon className='h-5 w-5 text-gray-400 ml-2' />
                     </a>
                 </div>
-                <div className='w-6/12'>
+                <div className='w-full sm:w-6/12'>
                     <div>
                         <h2 className='text-2xl font-bold text-gray-500' >Convertir una idea en un producto real con código es casi como hacer magia.</h2>
                         <p className='mt-10 text-gray-400'>
