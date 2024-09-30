@@ -23,12 +23,12 @@ export const ArticleProject = ({ project }: Iproject) => {
         <li>
 
             <article className='flex flex-col sm:flex-row gap-4 items-center justify-between py-14 border-b-4 border-blue-900/20'>
-                <figure className='w-full sm:w-2/4 rounded-xl overflow-hidden'>
+                <figure className='w-full sm:w-2/5 rounded-xl overflow-hidden'>
                     <a href={project.url} target='_blank' title={'Abrir ' + project.name}>
                         <Image className='w-full opacity-90 cursor-pointer hover:opacity-100 hover:scale-110 transition-all' src={project.image} alt={project.name} />
                     </a>
                 </figure>
-                <div className='w-full sm:w-2/4 rounded-xl'>
+                <div className='w-full sm:w-3/5 rounded-xl md:pl-10'>
                     <a href={project.url} target='_blank' title={'Abrir ' + project.name}>
                         <h3 className='text-2xl font-semibold tracking-wider flex items-center mb-2'>
                             <span className='hover:text-gray-900 text-gray-600 transition-colors border-b-2 border-b-transparent hover:border-blue-950'>

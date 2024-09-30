@@ -293,7 +293,7 @@ const listOfTechnologies = [
 
 export const TechnologiesCarrucel = () => {
     return (
-        <div className='w-full m-auto my-10 2xl:my-20 flex overflow-x-hidden'>
+        <div className='w-full m-auto mt-10 2xl:my-20 flex overflow-x-hidden'>
             <div className='flex tecnologies-carrucel'>
                 {
                     listOfTechnologies.map((technology, index) => {

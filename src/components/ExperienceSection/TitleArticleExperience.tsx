@@ -4,7 +4,7 @@ import React from 'react'
 export const TitleArticleExperience = ({ place, link, position }: { place: string, link?: string, position: string }) => {
     return (
         <div>
-            <h3 className='text-xl font-semibold flex flex-1 items-center'>
+            <h3 className='text-2xl font-semibold flex flex-1 items-center'>
                 {place}
                 {
                     link && (

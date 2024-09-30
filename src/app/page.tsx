@@ -1,7 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next';
-import { AboutMe, AskSection, ProjectSection } from '@/components';
-import { TechnologiesCarrucel } from '@/components/TechnologiesCarrucel/TechnologiesCarrucel';
+import { AboutMe, AskSection, ExperienceSection, Footer, ProjectSection, TechnologiesCarrucel } from '@/components';
 
 export const metadata: Metadata = {
     title: 'Josá Galdámez | Fullstack Developer',
@@ -19,6 +18,7 @@ const IndexHome = () => {
             <TechnologiesCarrucel />
             <AboutMe />
             <ProjectSection />
+            <ExperienceSection />
         </main>
     )
 }

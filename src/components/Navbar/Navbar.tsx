@@ -12,16 +12,19 @@ export const Navbar = () => {
             </div>
             <menu>
                 <ul className='flex items-center justify-between space-x-5'>
+                    <li className='hidden sm:block'>
+                        <Link href={'#projects'}>Proyectos</Link>
+                    </li>
+                    <li className='hidden sm:block'>
+                        <Link href={'#experience'}>Experiencia</Link>
+                    </li>
                     <li>
                         <Link href={'/blog'}>Blog</Link>
                     </li>
-                    <li>
-                        <Link href={'#projects'}>Proyectos</Link>
-                    </li>
-                    <li>
+                    <li className='hidden sm:block'>
                         <Link href={'/contact'}>Contacto</Link>
                     </li>
-                    <li className='bg-slate-800 text-white px-2 py-1 rounded-lg'>
+                    <li className='hidden sm:block bg-slate-800 text-white px-2 py-1 rounded-lg'>
                         <a href={'/JoseGaldamez_CV.pdf'} download={'JoseGaldamez_CV.pdf'}>Descargar CV</a>
                     </li>
                 </ul>

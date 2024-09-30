@@ -4,7 +4,7 @@ import React from 'react'
 
 export const AboutMe = () => {
     return (
-        <div className='max-w-6xl px-10 2xl:px-0 mx-auto mt-48 mb-32'>
+        <div className='max-w-6xl px-10 2xl:px-0 mx-auto mt-16 md:mt-20 lg:mt-32 xl:mt-48 mb-32'>
 
             <div className='block w-full sm:flex justify-between'>
                 <div className='w-full sm:w-5/12 mb-24'>
