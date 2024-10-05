@@ -10,8 +10,7 @@ export const CardArticle = ({ title, image, link, description, date, category }:
                 </div>
                 <div className="px-3 py-5">
                     <div className="flex justify-between">
-                        <span className="inline-flex items-center rounded-md bg-gray-700 px-2 py-1 text-xs font-medium text-gray-100 ring-1 ring-inset ring-gray-500/10">{date}</span>
-                        <span className="underline text-xs">{category}</span>
+                        <span className="inline-flex items-center rounded-md py-1 text-xs font-medium text-gray-400">{date}</span>
                     </div>
                     <h2 className="mt-5 text-xl font-bold mb-4 text-slate-500 hover:text-slate-900">
                         {title}

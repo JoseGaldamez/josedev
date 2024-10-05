@@ -1,10 +1,10 @@
-import { CardArticle, Footer } from "@/components"
-import { articlesList } from "@/data/testArticlds.data"
+import { CardArticle } from "@/components"
+import { blogArticlesList } from "@/data/articles.data"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: 'Josá Galdámez | Blog',
-    description: 'Artículos sobre desarrollo web y móvil, tecnología y programación.s',
+    description: 'Artículos sobre desarrollo web y móvil, tecnología y programación.',
 }
 
 const BlogPage = () => {
@@ -16,7 +16,7 @@ const BlogPage = () => {
                 <hr className="mb-10" />
                 <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {
-                        articlesList.map((article, index) => (
+                        blogArticlesList.map((article, index) => (
                             <CardArticle key={index} {...article} />
                         ))
                     }

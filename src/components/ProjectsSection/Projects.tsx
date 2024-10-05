@@ -9,7 +9,7 @@ import { projectsList } from '@/utils/projects'
 export const Projects = () => {
     return (
         <div className='p-14'>
-            <h2 className='text-2xl text-gray-700 font-bold tracking-wide flex items-center mb-5'>
+            <h2 className='text-2xl text-gray-700 font-bold tracking-wide flex items-center mt-0'>
                 <CodeBracketIcon className='w-8 h-8 mr-3' />
                 Proyectos
             </h2>
