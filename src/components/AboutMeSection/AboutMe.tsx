@@ -1,5 +1,4 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
 import React from 'react'
 
 export const AboutMe = () => {
@@ -14,7 +13,7 @@ export const AboutMe = () => {
                     <p className='mt-5 flex text-gray-400 text-md font-bold'>
                         Te invito a revisar mi Curso de Android Nativo con Jetpack Compose
                     </p>
-                    <a href={'https://www.udemy.com/course/android-con-jetpack-compose-movil-apps-nativas-y-modernas/?referralCode=B7B372FCDD23BF3164B5'} target='_blank' className='mt-5 flex bg-slate-800 text-white px-2 py-2 rounded-lg items-center justify-center'>
+                    <a href={'https://www.udemy.com/course/android-con-jetpack-compose-movil-apps-nativas-y-modernas/?couponCode=ENERO_2025'} target='_blank' className='mt-5 flex bg-slate-800 text-white px-2 py-2 rounded-lg items-center justify-center'>
                         <span>Ver en Udemy</span> <ArrowTopRightOnSquareIcon className='h-5 w-5 text-gray-400 ml-2' />
                     </a>
                 </div>
