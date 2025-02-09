@@ -9,6 +9,10 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 'play-lh.googleusercontent.com'
+            },
+            {
+                protocol: 'https',
+                hostname: "img-c.udemycdn.com"
             }
         ],
     },

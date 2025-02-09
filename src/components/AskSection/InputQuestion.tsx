@@ -58,9 +58,12 @@ export const InputQuestion = () => {
             </form>
             {
                 response !== '' && (
-                    <article className='mt-10 text-base text-left max-w-3xl mx-auto'>
-                        <span dangerouslySetInnerHTML={{ __html: textToHtml(response) }} className=' text-gray-500'>
-                        </span>
+                    <article className='mt-10 text-lg text-left max-w-3xl mx-auto flex gap-3'>
+                        <div>
+                            <span className='bg-gray-300 w-12 h-12 rounded-full flex justify-center items-center text-lg text-white font-bold p-2'>AI</span>
+                        </div>
+                        <p dangerouslySetInnerHTML={{ __html: textToHtml(response) }} className=' text-gray-500'>
+                        </p>
                     </article>
                 )
             }

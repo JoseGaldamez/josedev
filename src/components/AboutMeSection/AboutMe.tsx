@@ -1,5 +1,7 @@
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import React from 'react'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
+import { VideoYoutube } from './VideoYoutube'
+
 
 export const AboutMe = () => {
     return (
@@ -8,12 +10,12 @@ export const AboutMe = () => {
             <div className='block w-full sm:flex justify-between'>
                 <div className='w-full sm:w-5/12 mb-24'>
                     <div className='w-full rounded-2xl overflow-hidden mt-8'>
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/q4vNwBUshKI?si=e0xCH4YJwTR4hAps" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        <VideoYoutube />
                     </div>
                     <p className='mt-5 flex text-gray-400 text-md font-bold'>
                         Te invito a revisar mi Curso de Android Nativo con Jetpack Compose
                     </p>
-                    <a href={'https://www.udemy.com/course/android-con-jetpack-compose-movil-apps-nativas-y-modernas/?couponCode=ENERO_2025'} target='_blank' className='mt-5 flex bg-slate-800 text-white px-2 py-2 rounded-lg items-center justify-center'>
+                    <a href={'https://www.udemy.com/course/android-con-jetpack-compose-movil-apps-nativas-y-modernas/?couponCode=FEBRERO_2025'} target='_blank' className='mt-5 flex bg-slate-800 text-white px-2 py-2 rounded-lg items-center justify-center'>
                         <span>Ver en Udemy</span> <ArrowTopRightOnSquareIcon className='h-5 w-5 text-gray-400 ml-2' />
                     </a>
                 </div>

@@ -9,7 +9,7 @@ export const AskSection = () => {
                 </h1>
                 <div className='mt-5'>
                     <p className='text-md text-gray-400'>
-                        <strong>Desarrollador Fullstack</strong> con 3 años de experiencia, especializado en aplicaciones web y móviles.
+                        <strong>Desarrollador Fullstack con 5 años de experiencia</strong>, especializado en aplicaciones web y móviles.
                     </p>
                 </div>
                 <div className='max-w-4xl mx-auto mt-14'>
