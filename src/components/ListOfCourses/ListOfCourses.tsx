@@ -1,41 +1,25 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import React from 'react'
 
-export const ListOfCourses = async () => {
+interface ListCoursesProps {
+    courses: CourseModel[]
+}
 
-    const result = await fetch("https://josedev-website-default-rtdb.firebaseio.com/courses.json");
-    const resultJson = await result.json();
 
-    const listOfElements = Object.keys(resultJson);
-    const coursesData: CourseModel[] = [];
-
-    listOfElements.forEach((course: any) => {
-        const currentCourse = resultJson[course];
-
-        coursesData.push({
-            title: currentCourse.title,
-            description: currentCourse.description,
-            image: currentCourse.image,
-            url: currentCourse.url
-        })
-    })
-
-    console.log(coursesData);
-
+export const ListOfCourses = ({ courses }: ListCoursesProps) => {
 
     return (
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
             {
-                coursesData.length === 0 && (
+                courses.length === 0 && (
                     <div>
                         No hay cursos actualmente
                     </div>
                 )
             }
 
-            {coursesData.map((course, index) => (
+            {courses.map((course, index) => (
                 <article key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
                     <Image width={500} height={500} src={course.image} alt={course.title} className="w-full" />
                     <div className="p-5">

@@ -43,7 +43,12 @@ export const InputQuestion = () => {
 
     const textToHtml = (text: string) => {
         var urlRegex = /(https?:\/\/[^\s]+)/g;
+
         const newText = text.replace(urlRegex, function (url) {
+            if (url.endsWith(".")) {
+                url = url.slice(0, -1);
+                url += " ";
+            }
             return `<a class='text-blue-400 underline' target='_blank' href=${url}>${url}</a>`
         })
         return newText
@@ -62,8 +67,8 @@ export const InputQuestion = () => {
                         <div>
                             <span className='bg-gray-300 w-12 h-12 rounded-full flex justify-center items-center text-lg text-white font-bold p-2'>AI</span>
                         </div>
-                        <p dangerouslySetInnerHTML={{ __html: textToHtml(response) }} className=' text-gray-500'>
-                        </p>
+                        <div dangerouslySetInnerHTML={{ __html: response }} className=' text-gray-500'>
+                        </div>
                     </article>
                 )
             }

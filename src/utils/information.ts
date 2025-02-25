@@ -5,7 +5,8 @@ export const txtFile = `Hola mucho gusto, mi nombre completo es José Oveniel Ga
 
     Mi número de teléfono y Whatsapp es: +504 3175-1455.
     Mi correo electrónico es: josegaldamez1991@gmail.com.
-    Link del Blog: https://www.codigocorrecto.com/
+    Link del Blog: https://www.josegaldamez.dev/blog/
+    Link del sus cursos: https://www.josegaldamez.dev/courses/
     Link de Facebook: https://www.facebook.com/josegaldamezdev
     Link de Github: https://github.com/JoseGaldamez
     Link de LinkedIn: https://www.linkedin.com/in/josegaldamezdev
