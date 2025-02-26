@@ -4,6 +4,10 @@
 
 @layer base {
   :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 1, 1, 1;
+    --background-end-rgb: 23, 3, 45;
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -66,12 +70,21 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom right, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
-  body {
-    @apply bg-background text-foreground;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
 

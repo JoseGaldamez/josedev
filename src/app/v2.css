@@ -1,0 +1,13 @@
+body {
+    background: rgb(0, 0, 0);
+    background: radial-gradient(ellipse at top, #000000, #0f0f00), radial-gradient(ellipse at bottom, #0b1304, #051100);
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.textarea_chatbot {
+    field-sizing: content;
+    resize: none;
+}
