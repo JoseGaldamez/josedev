@@ -7,7 +7,6 @@ export const openai: OpenAI = new OpenAI({
 
 export const askQuestionToAI = async (question: string) => {
     return openai.chat.completions.create({
-        stream: true,
         model: "gpt-3.5-turbo-16k",
         messages: [
             {
