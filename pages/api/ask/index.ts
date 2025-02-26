@@ -29,11 +29,11 @@ export default async function handler(
         return responseSSE({ request }, async (sendEvent) => {
             const response = await askQuestionToAI(question);
 
-            for await (const part of response) {
-                if (part.choices[0].delta.content) {
-                    sendEvent(part.choices[0].delta.content);
-                }
-            }
+            // for await (const part of response) {
+            //     if (part.choices[0].delta.content) {
+            //         sendEvent(part.choices[0].delta.content);
+            //     }
+            // }
 
             sendEvent("__END__");
         });

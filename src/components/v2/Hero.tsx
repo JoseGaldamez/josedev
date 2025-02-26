@@ -1,11 +1,15 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 
 import { motion } from "framer-motion"
 import { ArrowRightIcon, ChatBubbleBottomCenterIcon, ChatBubbleOvalLeftEllipsisIcon, StarIcon } from '@heroicons/react/24/outline'
 import { SocialLinksHorizontal } from './SocialLinksHorizontal';
+import { Fab } from './Fab';
 
 export const Hero = () => {
+
+    const [show, setShow] = useState(false)
+
     return (
         <section id='home' className='border-b border-gray-100 border-opacity-20'>
 
@@ -27,6 +31,7 @@ export const Hero = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="rounded-full"
+                            onClick={() => setShow(true)}
                         >
                             <span className='bg-white bg-opacity-5 hover:bg-opacity-10 transition-all py-3 px-5 rounded-full flex items-center justify-center text-lg font-light'>
                                 Chat con mi AI
@@ -66,6 +71,7 @@ export const Hero = () => {
             </div>
 
 
+            <Fab show={show} setShow={setShow} />
         </section>
     )
 }

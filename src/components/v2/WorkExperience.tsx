@@ -1,6 +1,7 @@
 'use client'
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline"
 import { motion } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 
 const experiences = [
     {
@@ -37,11 +38,34 @@ const experiences = [
     },
 ]
 export const WorkExperience = () => {
+
+    const [isInView, setIsInView] = useState(false)
+    const sectionRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsInView(entry.isIntersecting)
+            },
+            { threshold: 0.1 },
+        )
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current)
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current)
+            }
+        }
+    }, [])
+
     return (
         <section id="experience" className="py-48">
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-medium mb-24 text-center">Experiencia Laboral</h2>
-                <div className="relative">
+                <div ref={sectionRef} className="relative">
                     {/* Vertical line */}
                     <div
                         className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-yellow-700 rounded-lg"></div>
@@ -50,12 +74,12 @@ export const WorkExperience = () => {
                         <motion.div
                             key={exp.id}
                             initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             className={`relative mb-8 ${index % 2 === 0 ? "md:ml-auto md:pl-8" : "md:mr-auto md:pr-8"} md:w-1/2`}
                         >
                             <div className="flex items-center w-full">
-                                <div className="bg-[#0a0e03bc] p-6 rounded-lg shadow-lg w-full my-5">
+                                <div className="bg-[#0b1003f4] p-6 rounded-lg shadow-lg w-full my-5">
                                     <h3 className="text-2xl font-medium mb-2">{exp.title}</h3>
                                     <a href={exp.url} target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:underline transition-colors flex items-center">
                                         {exp.company}

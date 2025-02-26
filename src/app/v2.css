@@ -10,4 +10,13 @@ html {
 .textarea_chatbot {
     field-sizing: content;
     resize: none;
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.textarea_chatbot:disabled {
+    background-color: #cccccc2f;
 }

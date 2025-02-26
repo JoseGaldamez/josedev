@@ -8,7 +8,7 @@ export const Header = () => {
                 <ul className="flex justify-center space-x-6">
                     <li>
                         <Link href="/#home" className="text-slate-100 hover:text-yellow-600 transition-colors">
-                            Habilidades
+                            Inicio
                         </Link>
                     </li>
                     <li>
@@ -21,11 +21,7 @@ export const Header = () => {
                             Proyectos
                         </Link>
                     </li>
-                    <li>
-                        <Link href="#projects" className="text-slate-100 hover:text-yellow-600 transition-colors">
-                            Contacto
-                        </Link>
-                    </li>
+
                 </ul>
             </nav>
         </header>
