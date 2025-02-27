@@ -147,7 +147,7 @@ export const ProjectsSection = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div className="hidden md:grid grid-cols-1 lg:grid-cols-12 gap-8">
                     {/* Lista de proyectos (navegación) */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -276,8 +276,8 @@ export const ProjectsSection = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="mt-20"
                 >
-                    <h3 className="text-2xl font-bold mb-8 text-center ">Proyectos Destacados</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div className="grid md:hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {projects
                             .filter((project) => project.featured)
                             .map((project, index) => (

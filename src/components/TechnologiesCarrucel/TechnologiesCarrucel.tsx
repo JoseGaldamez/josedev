@@ -293,13 +293,13 @@ const listOfTechnologies = [
 
 export const TechnologiesCarrucel = () => {
     return (
-        <div className='w-full m-auto mt-10 2xl:my-20 flex overflow-x-hidden'>
+        <div className='w-full m-auto mt-10 2xl:my-20 flex overflow-x-hidden bg-slate-700 bg-opacity-10 py-10'>
             <div className='flex tecnologies-carrucel'>
                 {
                     listOfTechnologies.map((technology, index) => {
                         return (
                             <article key={technology.name + index} className='w-16 2xl:w-36 mx-14'>
-                                <img className='w-full opacity-80 transition-all hover:opacity-100' src={technology.image} alt={technology.name} />
+                                <img className='w-full opacity-30 transition-all hover:opacity-100' src={technology.image} alt={technology.name} />
                             </article>
                         );
                     })

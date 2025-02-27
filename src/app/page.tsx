@@ -5,6 +5,7 @@ import { Hero } from '@/components/v2/Hero';
 import { SocialLinks } from '@/components/v2/SocialLinks';
 import { WorkExperience } from '@/components/v2/WorkExperience';
 import { ProjectsSection } from '@/components/v2/Projects';
+import { TechnologiesCarrucel } from '@/components';
 
 export const metadata: Metadata = {
     title: 'Josá Galdámez | Fullstack Developer',
@@ -21,7 +22,10 @@ const IndexHome = () => {
             <Header />
             <Hero />
             <WorkExperience />
+            <TechnologiesCarrucel />
             <ProjectsSection />
+
+
             <div className='hidden md:block'>
                 <SocialLinks />
             </div>

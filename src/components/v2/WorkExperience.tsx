@@ -62,7 +62,7 @@ export const WorkExperience = () => {
     }, [])
 
     return (
-        <section id="experience" className="py-48">
+        <section id="experience" className="py-10 md:py-40">
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-medium mb-24 text-center">Experiencia Laboral</h2>
                 <div ref={sectionRef} className="relative">
