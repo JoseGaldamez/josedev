@@ -1,0 +1,33 @@
+.paragraph {
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+.h2 {
+    color: #eee;
+    font-size: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.h3 {
+    color: #eee;
+    font-size: 1.5rem;
+}
+
+.list-with-bullets li {
+    list-style-type: circle;
+    margin-left: 2rem;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.button-link {
+    background-color: #ca8a04;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}

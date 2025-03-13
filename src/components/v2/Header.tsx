@@ -5,8 +5,10 @@ export const Header = () => {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md flex justify-between items-center py-5 md:py-0 ">
             <div className='px-5 md:px-10'>
-                <h1
-                    className="uppercase text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#f6f4e5] to-[#dbf7a6d2] bg-clip-text text-transparent">JG</h1>
+                <Link href="/#home" className="text-slate-100 hover:text-yellow-600 transition-colors">
+                    <h1
+                        className="uppercase text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#f6f4e5] to-[#dbf7a6d2] bg-clip-text text-transparent">JG</h1>
+                </Link>
             </div>
             <nav className="hidden md:block mx-auto px-6 py-4">
                 <ul className="flex justify-center space-x-6">
@@ -21,8 +23,13 @@ export const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#projects" className="text-slate-100 hover:text-yellow-600 transition-colors">
+                        <Link href="/#projects" className="text-slate-100 hover:text-yellow-600 transition-colors">
                             Proyectos
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/blog" className="text-slate-100 hover:text-yellow-600 transition-colors">
+                            Blog
                         </Link>
                     </li>
 
