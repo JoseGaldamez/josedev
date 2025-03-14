@@ -29,13 +29,17 @@ export const Header = () => {
                     </li>
                     <li>
                         <Link href="/blog" className="text-slate-100 hover:text-yellow-600 transition-colors">
-                            Blog
+                            Artículos
                         </Link>
                     </li>
 
                 </ul>
             </nav>
-            <div className='mr-5'>
+
+            <div className='mr-5 flex items-center gap-6'>
+                <Link href="/blog" className="text-slate-100 hover:text-yellow-600 transition-colors block md:hidden">
+                    Artículos
+                </Link>
                 <Link href="/JoseGaldamez_CV.pdf" target="_blank" rel="noopener noreferrer" className="bg-yellow-600 text-white hover:bg-yellow-700 rounded-lg px-4 py-2 transition-colors">
                     Descargar CV
                 </Link>

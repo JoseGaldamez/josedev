@@ -21,6 +21,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         return {
             title: `${post.title} | Blog`,
             description: post.description,
+            openGraph: {
+                images: post.image
+            }
         };
     } catch {
         return {
