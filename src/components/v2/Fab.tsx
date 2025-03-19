@@ -8,11 +8,11 @@ import { MessagesList } from "./MessagesList"
 import { askToAI } from "@/server/openai.actions"
 
 interface Props {
-    show: boolean
-    setShow: (show: boolean) => void
+    show?: boolean
+    setShow?: (show: boolean) => void
 }
 
-export const Fab = ({ show, setShow }: Props) => {
+export const Fab = ({ show = false, setShow = (value) => { } }: Props) => {
     const [isOpen, setIsOpen] = useState(false)
     const [messages, setMessages] = useState<Message[]>([])
     const [message, setMessage] = useState("")

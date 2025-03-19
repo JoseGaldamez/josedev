@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     try {
         const post = await getPostBySlug(params.slug);
         return {
-            title: `${post.title} | Blog`,
+            title: `${post.title} | José Galdámez Blog`,
             description: post.description,
             openGraph: {
                 images: post.image
@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         };
     } catch {
         return {
-            title: 'Post no encontrado',
-            description: 'El post que buscas no existe',
+            title: 'Artículo no encontrado',
+            description: 'El artículo que buscas no existe',
         };
     }
 }
