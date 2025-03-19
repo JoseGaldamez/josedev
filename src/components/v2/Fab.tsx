@@ -9,7 +9,7 @@ import { askToAI } from "@/server/openai.actions"
 
 interface Props {
     show?: boolean
-    setShow?: (show: boolean) => void
+    setShow: (show: boolean) => void
 }
 
 export const Fab = ({ show = false, setShow = (value) => { } }: Props) => {
@@ -60,11 +60,15 @@ export const Fab = ({ show = false, setShow = (value) => { } }: Props) => {
         const response = {
             id: new Date().getTime().toString(),
             user: "user",
-            message: answer.choices[0].message.content || "",
+            message: removeHTMLWrapper(answer || ""),
         }
 
         setMessages([...messages, newMessageUser, response])
         setLoading(false)
+    }
+
+    const removeHTMLWrapper = (text: string) => {
+        return text.replace("```html", "").replace("```", "");
     }
 
     return (

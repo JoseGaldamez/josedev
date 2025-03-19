@@ -43,4 +43,7 @@ export const txtFile = `Hola mucho gusto, mi nombre completo es José Oveniel Ga
     En Stefanini Group trabajo con un equipo ágil. Compañeros desarrolladores, data modelers, arquitectos, equipo de QA, etc. Gracias a mis compañeros he aprendido muchísimo, definitivamente trabajar con un equipo de profesionales es una bendición.
 
     Anteriormente trabajé durante 4 años en Radio Progreso, como técnico multimedia y desarrollador de software. Cree su sitio web y durante el último año que trabajé, construí con Flutter su aplicación móvil que permite ver las noticias que publican, escuchar la radio en vivo y compartir vídeo, todo administrado desde un dashboard que cree en ReactJS, siendo yo el único encargado del frontend, backend, arquitectura, base de datos, etc. Tanto de la aplicación como del dashboard.
+
+    Puedes descargar mi CV desde el siguiente enlace: https://josegaldamez.dev/JoseGaldamez_CV.pdf
+
 `;
