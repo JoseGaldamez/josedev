@@ -33,7 +33,7 @@ export default function Page() {
                     Las formas más rápidas de contactarme son mediante mi correo electrónico o mi whatsapp.
                 </p>
                 <div className="flex items-center gap-4">
-                    <Link href="mailto:josegaldamez@gmail.com" target="_blank" rel="noopener noreferrer" className="bg-sky-500 text-white hover:bg-sky-600 rounded-full px-5 py-3 transition-colors text-lg font-light flex items-center justify-center">
+                    <Link href="mailto:josegaldamez1991@gmail.com" target="_blank" rel="noopener noreferrer" className="bg-sky-500 text-white hover:bg-sky-600 rounded-full px-5 py-3 transition-colors text-lg font-light flex items-center justify-center">
                         Correo electrónico <MailIcon className="h-6 w-6 text-gray-100 ml-3" />
                     </Link>
                     <Link href="https://wa.me/50431751455?text=Hola,%20José!%20Vengo%20de%20tu%20página%20web%20y%20quiero%20hablar%20contigo." target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white hover:bg-green-700 rounded-full px-5 py-3 transition-colors text-lg font-light flex items-center justify-center">
