@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 const IndexHome = () => {
     return (
         <main className='min-h-screen hero text-white relative'>
+            Develop
             <Header />
             <Hero />
             <WorkExperience />
