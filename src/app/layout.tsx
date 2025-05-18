@@ -6,6 +6,14 @@ import './v2.css';
 
 const inter = Poppins({ weight: ['100', '400', '300', "500", "700", "900"], subsets: ['latin'] })
 
+export const metadata = {
+  title: 'Josá Galdámez | Fullstack Developer',
+  description: 'Desarrollador de aplicaciones web y móviles',
+  openGraph: {
+    images: "https://josegaldamez.dev/jose-portada.png"
+  }
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -17,9 +25,7 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-2477956073542454" />
       </head>
       <body className={inter.className}>
-
         {children}
-
       </body>
       <GoogleAnalytics gaId='G-XPEDCTE08B' />
     </html>

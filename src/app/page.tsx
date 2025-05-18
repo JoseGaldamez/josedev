@@ -25,7 +25,6 @@ const IndexHome = () => {
             <TechnologiesCarrucel />
             <ProjectsSection />
 
-
             <div className='hidden md:block'>
                 <SocialLinks />
             </div>

@@ -72,27 +72,27 @@ Pero, ¿esto significa que no es una buena idea usar la inteliencia artificial p
 <ul class='list-with-bullets'>
     <li>
         <p class='paragraph' markdown='1'>
-            Cuando ya sabes como programar y quieres ahorrar tiempo.
+            - Cuando ya sabes como programar y quieres ahorrar tiempo.
         </p>
     </li>
     <li>
         <p class='paragraph' markdown='1'>
-            Cuando no tienes idea de por donde empezar.
+            - Cuando no tienes idea de por donde empezar.
         </p>
     </li>
     <li>
         <p class='paragraph' markdown='1'>
-            Cuando quieres aprender un nuevo lenguaje de programación y saber qué preguntar, como por ejemplo como hacer una lista en python.
+            - Cuando quieres aprender un nuevo lenguaje de programación y saber qué preguntar, como por ejemplo como hacer una lista en python.
         </p>
     </li>
     <li>
         <p class='paragraph' markdown='1'>
-            Cuando no estás trabajando con información sensible, si trabajas en proyectos para una empresa, es mejor que no uses la AI a menos que tengas permiso explícito de tu jefe.
+            - Cuando no estás trabajando con información sensible, si trabajas en proyectos para una empresa, es mejor que no uses la AI a menos que tengas permiso explícito de tu jefe.
         </p>
     </li>
     <li>
         <p class='paragraph' markdown='1'>
-            En tus proyectos personales para avanzar más rápido o inspirarte y pedirle consejos.
+            - En tus proyectos personales para avanzar más rápido o inspirarte y pedirle consejos.
         </p>
     </li>
 </ul>
@@ -102,12 +102,12 @@ Pero, ¿esto significa que no es una buena idea usar la inteliencia artificial p
 <ul class='list-with-bullets'>
     <li>
         <p class='paragraph' markdown='1'>
-            Si trabajas en un proyecto de una empresa, es mejor que no uses la AI a menos que tengas permiso explícito de tu jefe y la empresa.
+            - Si trabajas en un proyecto de una empresa, es mejor que no uses la AI a menos que tengas permiso explícito de tu jefe y la empresa.
         </p>
     </li> 
     <li>
         <p class='paragraph' markdown='1'>
-            Cuando vas comenzando a programar y no tienes mucha experiencia en la terminología. No recomiendo usar AI al aprender tu primer lenguaje de programación. (debes sufrir y cochar con roca para poder entender como funciona el desarrollo de software).
+            - Cuando vas comenzando a programar y no tienes mucha experiencia en la terminología. No recomiendo usar AI al aprender tu primer lenguaje de programación. (debes sufrir y cochar con roca para poder entender como funciona el desarrollo de software).
         </p>
     </li>
     

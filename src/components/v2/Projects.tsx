@@ -56,9 +56,9 @@ const projects = [
 const Badge = ({ children, variant = "default" }: any) => {
     const baseClasses = "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium"
     const variants: any = {
-        default: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
-        outline: "border border-gray-200 text-gray-300 dark:border-gray-700 dark:text-gray-300",
-        secondary: "bg-blue-950 text-gray-100 dark:bg-gray-700 dark:text-gray-300",
+        default: "bg-blue-100",
+        outline: "border border-gray-200",
+        secondary: "bg-blue-950",
     }
 
     return <span className={`${baseClasses} ${variants[variant]}`}>{children}</span>
@@ -71,7 +71,7 @@ const Button = ({ children, variant = "default", size = "default", className = "
 
     const variants: any = {
         default: "bg-blue-950 text-white hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700",
-        outline: "border border-gray-300 bg-transparent hover:bg-gray-900",
+        outline: "border border-gray-300 bg-gray-100 text-gray-500 hover:bg-gray-900 hover:text-white",
         ghost: "bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800",
         icon: "p-0 bg-transparent",
     }
@@ -129,7 +129,7 @@ export const ProjectsSection = () => {
         <section
             id="projects"
             ref={sectionRef}
-            className="py-20"
+            className="py-20 bg-white bg-opacity-20"
         >
             <div className="max-w-6xl px-4 mx-auto">
                 <motion.div
@@ -138,16 +138,16 @@ export const ProjectsSection = () => {
                     transition={{ duration: 0.6 }}
                     className="mb-12 text-center"
                 >
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+                    <h2 className="text-3xl text-[#14426d] font-bold tracking-tight sm:text-4xl md:text-5xl">
                         Mis Proyectos
                     </h2>
-                    <p className="mt-4 max-w-2xl mx-auto">
+                    <p className="mt-4 max-w-2xl mx-auto text-[#14426d]">
                         Una selección de los proyectos en los que he trabajado, desde aplicaciones web hasta APIs y desarrollo
                         móvil.
                     </p>
                 </motion.div>
 
-                <div className="hidden md:grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div className="hidden md:grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     {/* Lista de proyectos (navegación) */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -164,8 +164,8 @@ export const ProjectsSection = () => {
                             >
                                 <div
                                     className={`cursor-pointer transition-all duration-300 hover:shadow-lg rounded-lg border ${activeProject.id === project.id
-                                        ? "bg-[#131f02f4] py-8 rounded-lg shadow-lg w-full my-5"
-                                        : "bg-[#1016074c] py-2 rounded-lg shadow-lg w-full my-5"
+                                        ? "bg-[#14426d] py-8 rounded-lg shadow-lg w-full my-5"
+                                        : "bg-[#c3cad1] py-2 rounded-lg shadow-lg w-full my-5 text-[#061929]"
                                         }`}
                                     onClick={() => {
                                         setActiveProject(project);
@@ -176,11 +176,9 @@ export const ProjectsSection = () => {
                                             <h3 className="font-medium text-lg">{project.title}</h3>
                                             <div className="flex flex-wrap gap-1 mt-1">
                                                 {project.tags.slice(0, 2).map((tag) => (
-                                                    <Badge key={tag} variant="outline">
-                                                        {tag}
-                                                    </Badge>
+                                                    <span key={tag} className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium border border-gray-500">{tag}</span>
                                                 ))}
-                                                {project.tags.length > 2 && <Badge variant="outline">+{project.tags.length - 2}</Badge>}
+                                                {project.tags.length > 2 && <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium border border-gray-500">{project.tags.length - 2}</span>}
                                             </div>
                                         </div>
                                         <ChevronRight
@@ -242,7 +240,7 @@ export const ProjectsSection = () => {
                                 </div>
                             </div>
 
-                            <div className="p-6 bg-[#000000b7]">
+                            <div className="p-6">
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {activeProject.tags.map((tag) => (
                                         <Badge key={tag} variant="secondary" className="font-mono">
@@ -251,8 +249,8 @@ export const ProjectsSection = () => {
                                     ))}
                                 </div>
 
-                                <h3 className="text-2xl font-bold mb-2 text-white">{activeProject.title}</h3>
-                                <p className="text-gray-400 mb-4">{activeProject.description}</p>
+                                <h3 className="text-2xl font-bold mb-2 text-[#061929]">{activeProject.title}</h3>
+                                <p className="text-gray-600 mb-4 ">{activeProject.description}</p>
 
                                 <div className="flex gap-4">
                                     <Button variant="outline" size="sm" href={activeProject.github} asChild>
@@ -317,13 +315,13 @@ export const ProjectsSection = () => {
                                         <div className="p-4">
                                             <div className="flex flex-wrap gap-1 mb-2">
                                                 {project.tags.slice(0, 3).map((tag) => (
-                                                    <Badge key={tag} variant="outline">
+                                                    <Badge key={tag} variant="secondary">
                                                         {tag}
                                                     </Badge>
                                                 ))}
-                                                {project.tags.length > 3 && <Badge variant="outline">+{project.tags.length - 3}</Badge>}
+                                                {project.tags.length > 3 && <Badge variant="secondary">+{project.tags.length - 3}</Badge>}
                                             </div>
-                                            <h4 className="font-semibold mb-1">{project.title}</h4>
+                                            <h4 className="font-semibold text-lg mb-1 text-[#284c84]">{project.title}</h4>
                                             <p className="text-sm text-gray-400 line-clamp-2">{project.description}</p>
                                         </div>
                                     </div>
@@ -332,22 +330,7 @@ export const ProjectsSection = () => {
                     </div>
                 </motion.div>
 
-                {/* Botón para ver todos los proyectos */}
-                {/* <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="flex justify-center mt-12"
-                >
-                    <Button
-                        variant="outline"
-                        size="lg"
-                        className="group border-gray-300 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700"
-                    >
-                        Ver todos los proyectos
-                        <ChevronRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Button>
-                </motion.div> */}
+
             </div>
         </section>
     )

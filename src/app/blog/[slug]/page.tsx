@@ -48,9 +48,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <article className="container max-w-4xl mx-auto px-4 py-24">
                 <header className="mb-8">
                     <div>
-                        <span className='text-sm font-bold text-gray-500 underline'> {post.category} </span>
+                        <span className='text-sm font-bold text-[#061929] underline'> {post.category} </span>
                     </div>
-                    <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+                    <h1 className="text-4xl font-bold mb-4 text-[#061929]">{post.title}</h1>
                     <div className="text-gray-600 mb-4">
                         <span>{new Date(post.date).toLocaleDateString('es-ES', {
                             year: 'numeric',

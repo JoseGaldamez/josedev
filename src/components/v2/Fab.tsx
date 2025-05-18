@@ -74,12 +74,12 @@ export const Fab = ({ show = false, setShow = (value) => { } }: Props) => {
     return (
         <div className="z-50 fixed bottom-4 right-4">
             <motion.button
-                className="fixed bottom-4 right-4 bg-[#101604] rounded-full p-2 shadow-lg"
+                className="fixed bottom-4 right-4 bg-[#14426d] rounded-full p-2 shadow-lg"
                 onClick={() => setIsOpen(!isOpen)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
             >
-                <FaRobot className="text-4xl" />
+                <FaRobot className="text-4xl text-white" />
             </motion.button>
 
             <AnimatePresence>
@@ -88,13 +88,13 @@ export const Fab = ({ show = false, setShow = (value) => { } }: Props) => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 50 }}
-                        className="fixed bottom-20 right-4 max-w-sm md:max-w-lg w-5/6 md:w-full bg-[#1c1f17] rounded-lg shadow-lg p-4"
+                        className="fixed bottom-20 right-4 max-w-sm md:max-w-lg w-5/6 md:w-full bg-[#14426d] rounded-xl shadow-lg p-4"
                     >
                         <button className="absolute top-2 right-2 text-gray-400 hover:text-white" onClick={() => setIsOpen(false)}>
                             <FaTimes className="text-2xl" />
                         </button>
                         <h3 className="text-xl font-medium text-gray-300 mb-2">AI de José Galdámez</h3>
-                        <p className="text-sm text-gray-500 mb-4">Puedo contestar lo que necesites saber sobre José, como su experiencia laboral, sus habilidades, etc. ¿Cómo puedo ayudarte?</p>
+                        <p className="text-sm text-gray-200 mb-4">Puedo contestar lo que necesites saber sobre José, como su experiencia laboral, sus habilidades, etc. ¿Cómo puedo ayudarte?</p>
 
                         <div ref={listRef} className="w-full max-h-72 md:max-h-[700px] overflow-auto py-5 bg-gray-300 bg-opacity-10 my-5 rounded-2xl">
                             {

@@ -64,11 +64,11 @@ export const WorkExperience = () => {
     return (
         <section id="experience" className="py-10 md:py-40">
             <div className="container mx-auto px-6">
-                <h2 className="text-4xl font-medium mb-24 text-center">Experiencia Laboral</h2>
+                <h2 className="text-4xl text-[#14426d] font-medium mb-24 text-center">Experiencia Laboral</h2>
                 <div ref={sectionRef} className="relative">
                     {/* Vertical line */}
                     <div
-                        className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-yellow-700 rounded-lg"></div>
+                        className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#7790a6] rounded-lg"></div>
 
                     {experiences.map((exp, index) => (
                         <motion.div
@@ -79,7 +79,7 @@ export const WorkExperience = () => {
                             className={`relative mb-8 ${index % 2 === 0 ? "md:ml-auto md:pl-8" : "md:mr-auto md:pr-8"} md:w-1/2`}
                         >
                             <div className="flex items-center w-full">
-                                <div className="bg-[#0b1003f4] p-6 rounded-lg shadow-lg w-full my-5">
+                                <div className="bg-[#14426d] p-6 rounded-xl shadow-lg w-full my-5">
                                     <h3 className="text-2xl font-medium mb-2">{exp.title}</h3>
                                     <a href={exp.url} target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:underline transition-colors flex items-center">
                                         {exp.company}
