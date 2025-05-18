@@ -1,7 +1,5 @@
 body {
-    background: rgb(0, 0, 0);
-    background: radial-gradient(ellipse at top, #000000, #0f0f00), radial-gradient(ellipse at bottom, #0b1304, #051100);
-    color: white;
+    background: radial-gradient(ellipse at top, #e4e4e4, #f4f4f4), radial-gradient(ellipse at bottom, #0b1304, #051100);
 }
 html {
     scroll-behavior: smooth;
@@ -18,5 +16,5 @@ html {
 }
 
 .textarea_chatbot:disabled {
-    background-color: #cccccc2f;
+    background-color: #dedede;
 }

@@ -25,15 +25,15 @@ export const Hero = () => {
                         className='text-center'
                     >
                         <h1
-                            className="uppercase text-6xl md:text-7xl font-bold py-5 bg-gradient-to-r from-[#f6f4e5] to-[#dbf7a6d2] bg-clip-text text-transparent">José Galdámez</h1>
-                        <p className="text-xl mb-8">Desarrollador Fullstack</p>
+                            className="uppercase text-6xl md:text-7xl font-bold py-5 bg-gradient-to-r from-[#14426d] to-[#5a7298] bg-clip-text text-transparent">José Galdámez</h1>
+                        <p className="text-xl mb-8 text-[#14426d] opacity-80">Desarrollador Fullstack</p>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="rounded-full"
                             onClick={() => setShow(true)}
                         >
-                            <span className='bg-white bg-opacity-5 hover:bg-opacity-10 transition-all py-3 px-5 rounded-full flex items-center justify-center text-lg font-light'>
+                            <span className='bg-[#14426d] hover:bg-[#264867] transition-all py-3 px-5 rounded-full flex items-center justify-center text-lg font-light'>
                                 Chat con mi AI
                                 <ChatBubbleOvalLeftEllipsisIcon className='h-8 w-8 text-gray-100 ml-3' />
                             </span>
@@ -45,7 +45,7 @@ export const Hero = () => {
                 </div>
 
 
-                <div className='border-t border-gray-100 border-opacity-20 p-16 bg-black bg-opacity-20 hidden md:block'>
+                <div className='border-t border-gray-100 border-opacity-20 p-16 bg-[#14426d] bg-opacity-20 hidden md:block text-[#17334f]'>
 
                     <div className='flex items-center justify-between  gap-5 max-w-7xl w-full mx-auto'>
                         <div className='px-10 flex items-center justify-center'>
