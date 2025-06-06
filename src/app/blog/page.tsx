@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getAllPosts } from '@/utils/blog';
 import { Header } from '@/components/v2/Header';
 import Image from 'next/image';
+import { Footer } from '@/components/v2/Footer';
 
 export const metadata: Metadata = {
     title: 'Blog | Josá Galdámez',
@@ -38,6 +39,7 @@ export default async function BlogPage() {
                     ))}
                 </div>
             </div>
+            <Footer />
         </>
     );
 } 

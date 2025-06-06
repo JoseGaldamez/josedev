@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { ArrowRightIcon, ChatBubbleBottomCenterIcon, ChatBubbleOvalLeftEllipsisIcon, StarIcon } from '@heroicons/react/24/outline'
 import { SocialLinksHorizontal } from './SocialLinksHorizontal';
 import { Fab } from './Fab';
+import Link from 'next/link';
 
 export const Hero = () => {
 
@@ -49,8 +50,11 @@ export const Hero = () => {
 
                     <div className='flex items-center justify-between  gap-5 max-w-7xl w-full mx-auto'>
                         <div className='px-10 flex items-center justify-center'>
-                            <h2 className='text-5xl font-light mb-2 pr-4'>5,000+</h2>
-                            <p className='font-light pb-2'>Alumnos en Udemy</p>
+                            <h2 className='text-5xl font-light mb-2 pr-4'>6,000+</h2>
+                            <Link href='https://www.udemy.com/user/jose-galdamez-5/' target='_blank' className='font-light pb-2 hover:underline'>
+                                <p className='font-light pb-2'>Alumnos en Udemy</p>
+                            </Link>
+
                         </div>
                         <div className='px-10 flex items-center justify-center'>
                             <h2 className='text-5xl font-light mb-2 pr-4'>5+</h2>
