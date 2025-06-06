@@ -5,12 +5,12 @@ export const Footer = () => (
     <footer className="w-full bg-[#14426d] text-white mt-16 pt-10 pb-16">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="mb-4 md:mb-0 text-center md:text-left">
-                <h4 className="text-xl font-bold mb-2">Josá Galdámez</h4>
+                <h4 className="text-xl font-bold mb-2">José Galdámez</h4>
                 <p className="text-sm text-gray-200">
                     Fullstack Developer | Apasionado por la tecnología y el aprendizaje continuo.
                 </p>
                 <p className="text-xs text-gray-300 mt-2">
-                    &copy; {new Date().getFullYear()} Josá Galdámez. Todos los derechos reservados.
+                    &copy; {new Date().getFullYear()} José Galdámez. Todos los derechos reservados.
                 </p>
             </div>
             <div className="flex flex-col gap-2">
