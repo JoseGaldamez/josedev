@@ -8,6 +8,7 @@ import rehypeRaw from 'rehype-raw'
 import './blog.css';
 import { Header } from '@/components/v2/Header';
 import Image from 'next/image';
+import { Footer } from '@/components/v2/Footer';
 
 interface BlogPostPageProps {
     params: {
@@ -68,12 +69,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                             </span>
                         ))}
                     </div>
-                    <Image className='rounded-lg w-full h-auto my-5' src={post.image} alt={post.title} width={1000} height={1000} />
+                    <div className='overflow-hidden rounded-xl mt-5 w-full'>
+                        <Image className='rounded-lg w-full h-auto' src={post.image} alt={post.title} width={1000} height={1000} />
+                    </div>
                 </header>
                 <div className="prose prose-lg max-w-none">
                     <ReactMarkdown rehypePlugins={[rehypeRaw]}>{post.content}</ReactMarkdown>
                 </div>
             </article>
+            <Footer />
         </>
     );
 } 

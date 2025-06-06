@@ -64,7 +64,12 @@ export const WorkExperience = () => {
     return (
         <section id="experience" className="py-10 md:py-40">
             <div className="container mx-auto px-6">
-                <h2 className="text-4xl text-[#14426d] font-medium mb-24 text-center">Experiencia Laboral</h2>
+                <div className="mb-16">
+                    <h2 className="text-4xl text-[#14426d] font-medium mb-5 text-center">Experiencia Laboral</h2>
+                    <p className="text-gray-400 text-center mb-10">Aquí está un resumen de mi experiencia laboral.</p>
+                </div>
+
+
                 <div ref={sectionRef} className="relative">
                     {/* Vertical line */}
                     <div
@@ -76,7 +81,7 @@ export const WorkExperience = () => {
                             initial={{ opacity: 0, y: 50 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
-                            className={`relative mb-8 ${index % 2 === 0 ? "md:ml-auto md:pl-8" : "md:mr-auto md:pr-8"} md:w-1/2`}
+                            className={`relative mb-2 ${index % 2 === 0 ? "md:ml-auto md:pl-8" : "md:mr-auto md:pr-8"} md:w-1/2`}
                         >
                             <div className="flex items-center w-full">
                                 <div className="bg-[#14426d] p-6 rounded-xl shadow-lg w-full my-5">
