@@ -12,7 +12,7 @@ export const MessagesList = ({ messages, loading }: Props) => {
             {
                 messages.map((msg, index) => (
                     <p dangerouslySetInnerHTML={{ __html: msg.message }} key={msg.id}
-                        className={`text-gray-100 w-2/3 rounded-xl m-2 py-2 px-3 ${msg.user === "assistant" ? "bg-[#11375b] self-end" : "bg-[#0e2e4b] self-start"}`}>
+                        className={`text-gray-100 w-2/3 rounded-xl m-2 py-2 px-3 ${msg.user === "assistant" ? "bg-[#0e222e] self-end" : "bg-[#2eadad] self-start"}`}>
 
                     </p>
                 ))

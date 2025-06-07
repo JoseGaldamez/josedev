@@ -20,7 +20,7 @@ Hasta que un día, un colega me hizo una pregunta que desmoronó mi percepción:
 </p>
 
 <blockquote>
-    <p>“Si CORS realmente protege tu backend, ¿por qué herramientas como Postman, Insomnia o cURL pueden llamar a tu API sin ningún problema y sin ninguna configuración especial de CORS?”</p>
+    <p class='paragraph' markdown='1'>“Si CORS realmente protege tu backend, ¿por qué herramientas como Postman, Insomnia o cURL pueden llamar a tu API sin ningún problema y sin ninguna configuración especial de CORS?”</p>
 </blockquote>
 
 <p class='paragraph' markdown='1'>
@@ -118,9 +118,16 @@ Ahora podemos responder a la pregunta inicial. Postman no es un navegador. No im
 <p class='paragraph' markdown='1'>
 La historia de CORS es un recordatorio poderoso de que en el desarrollo de software, entender el "porqué" es tan crucial como saber el "cómo".
 </p>
-<ul>
-    <li><strong>El rol del Backend:</strong> Definir la política de seguridad (<code>Access-Control-Allow-Origin</code>).</li>
-    <li><strong>El rol del Navegador:</strong> Hacer cumplir esa política para proteger al usuario.</li>
+<ul class='list-with-bullets'>
+    <li>
+      <p class='paragraph' markdown='1'>
+      <strong>El rol del Backend:</strong> Definir la política de seguridad (<code>Access-Control-Allow-Origin</code>).
+   </p>
+    <li>
+      <p class='paragraph' markdown='1'>
+    <strong>El rol del Navegador:</strong> Hacer cumplir esa política para proteger al usuario.
+    </p>
+    </li>
 </ul>
 
 <p class='paragraph' markdown='1'>Así que la próxima vez que te enfrentes a un error de CORS, recuerda que no estás luchando contra una fortaleza en tu servidor. Estás trabajando con una característica de seguridad del navegador diseñada para mantener el ecosistema web un lugar más seguro.</p>

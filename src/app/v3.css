@@ -1,0 +1,92 @@
+/* Variables */
+:root {
+    --dark-color: #07151d;
+    --blue-color: #37baba;
+    --light-blue-color: #a1d8da;
+    --green-color: #296973;
+    --dark-blue-color: #3870ae;
+    --gray-color: #84848c;
+}
+
+body {
+    background: var(--dark-color);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.textarea_chatbot {
+    field-sizing: content;
+    resize: none;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    /* Placeholder white */
+    &::placeholder {
+        color: #fff;
+        opacity: 1;
+        font-weight: 300;
+    }
+}
+
+.textarea_chatbot:disabled {
+    background-color: #37baba;
+}
+
+.animated-shadow {
+    box-shadow:
+        0 0 0 0 #37baba,
+        0 0 0 0 #84848c;
+    animation: shadow-rotate-stop 2s linear infinite;
+}
+
+.animated-shadow:hover {
+    box-shadow:
+        0 0 0 0 #37baba,
+        0 0 0 0 #84848c;
+    animation: shadow-rotate 2s linear infinite;
+}
+
+@keyframes shadow-rotate-stop {
+    0% {
+        box-shadow:
+            2px 0 5px 0 #37baba,
+            -2px 0 5px 0 #84848c;
+    }
+    100% {
+        box-shadow:
+            2px 0 5px 0 #37baba,
+            -2px 0 5px 0 #84848c;
+    }
+}
+
+@keyframes shadow-rotate {
+    0% {
+        box-shadow:
+            2px 0 5px 0 #37baba,
+            -2px 0 5px 0 #84848c;
+    }
+    25% {
+        box-shadow:
+            0 2px 5px 0 #37baba,
+            0 -2px 5px 0 #84848c;
+    }
+    50% {
+        box-shadow:
+            -2px 0 5px 0 #37baba,
+            2px 0 5px 0 #84848c;
+    }
+    75% {
+        box-shadow:
+            0 -2px 5px 0 #37baba,
+            0 2px 5px 0 #84848c;
+    }
+    100% {
+        box-shadow:
+            2px 0 5px 0 #37baba,
+            -2px 0 5px 0 #84848c;
+    }
+}

@@ -2,7 +2,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { Poppins } from 'next/font/google'
 
 import './globals.css';
-import './v2.css';
+import './v3.css';
 
 const inter = Poppins({ weight: ['100', '400', '300', "500", "700", "900"], subsets: ['latin'] })
 

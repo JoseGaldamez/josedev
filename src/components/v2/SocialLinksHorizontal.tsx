@@ -11,7 +11,7 @@ export const SocialLinksHorizontal = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
-                className="block text-2xl text-[#284c84] hover:text-white transition-colors"
+                className="block text-2xl text-[#37baba] hover:text-white transition-colors"
             >
                 <FaGithub />
             </motion.a>
@@ -20,7 +20,7 @@ export const SocialLinksHorizontal = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
-                className="block text-2xl text-[#284c84] hover:text-white transition-colors"
+                className="block text-2xl text-[#37baba] hover:text-white transition-colors"
             >
                 <FaLinkedin />
             </motion.a>
@@ -29,7 +29,7 @@ export const SocialLinksHorizontal = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
-                className="block text-2xl text-[#284c84] hover:text-white transition-colors"
+                className="block text-2xl text-[#37baba] hover:text-white transition-colors"
             >
                 <FaTwitter />
             </motion.a>

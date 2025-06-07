@@ -1,27 +1,46 @@
 .paragraph {
-    color: #252525;
+    color: #fff;
     margin-bottom: 2rem;
 }
+
+.paragraph strong {
+    color: #a1d8da;
+}
+
+.paragraph code {
+    color: #a1d8da;
+}
+
 .h2 {
-    color: #061929;
+    color: #a1d8da;
     font-size: 2rem;
     border-bottom: 1px solid #474747;
 }
 
 .h3 {
-    color: #061929;
+    color: #a1d8da;
     font-size: 1.5rem;
 }
 
 .list-with-bullets li {
     list-style-type: circle;
     margin-left: 1rem;
+    color: #a1d8da;
+}
+
+ul li {
+    color: white;
+}
+
+ul li strong {
+    color: #a1d8da;
 }
 
 .image {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    background-color: #fff;
 }
 
 .button-link {

@@ -298,8 +298,8 @@ export const TechnologiesCarrucel = () => {
                 {
                     listOfTechnologies.map((technology, index) => {
                         return (
-                            <article key={technology.name + index} className='w-24 2xl:w-28 mx-14'>
-                                <img className='w-full opacity-60 transition-all hover:opacity-100 hover:scale-105' src={technology.image} alt={technology.name} />
+                            <article key={technology.name + index} className='w-20 lg:w-32 2xl:w-36 mx-14'>
+                                <img className='w-full opacity-60 transition-all hover:opacity-100 hover:scale-125' src={technology.image} alt={technology.name} />
                             </article>
                         );
                     })
