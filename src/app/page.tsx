@@ -1,6 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next';
 import { Footer, Header, Hero, ProjectsSection, Student, WorkExperience, TechnologiesCarrucel } from '@/components/v3';
+import ProjectsSectionModern from '@/components/v3/ProjectsModern';
 
 
 
@@ -20,7 +21,7 @@ const IndexHome = () => {
             <Hero />
             <WorkExperience />
             <TechnologiesCarrucel />
-            <ProjectsSection />
+            <ProjectsSectionModern />
             <Student />
             <Footer />
         </main>

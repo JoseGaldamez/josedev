@@ -54,3 +54,8 @@ ul li strong {
 .button-link:hover {
     background-color: #08273e;
 }
+
+figure figcaption a {
+    color: #a1d8da !important;
+    text-decoration: underline;
+}

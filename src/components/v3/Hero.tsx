@@ -36,8 +36,8 @@ export const Hero = () => {
                         className='text-center'
                     >
                         <h1
-                            className="uppercase text-6xl md:text-7xl font-bold py-5 bg-gradient-to-r from-[#244354] via-[#aad6eb]  to-[#244354] bg-clip-text text-transparent">José Galdámez</h1>
-                        <p className="text-xl mb-8 text-[#446677] opacity-80">Desarrollador Fullstack</p>
+                            className="uppercase text-6xl md:text-7xl font-black py-5 bg-gradient-to-r from-[#244354] via-[#aad6eb]  to-[#244354] bg-clip-text text-transparent">José Galdámez</h1>
+                        <p className="text-2xl mb-8 text-[#446677] opacity-80">Desarrollador Fullstack Web / iOS / Android</p>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}

@@ -93,10 +93,13 @@ export const Fab = ({ show = false, setShow = (value) => { } }: Props) => {
                         <button className="absolute top-2 right-2 text-gray-400 hover:text-white" onClick={() => setIsOpen(false)}>
                             <FaTimes className="text-2xl" />
                         </button>
-                        <h3 className="text-xl font-medium text-gray-50 mb-2">AI de José Galdámez</h3>
+                        <h3 className="text-xl font-medium text-gray-50 mb-2 flex items-center gap-2">
+                            <FaRobot className="text-2xl" /> AI de José Galdámez
+                        </h3>
+                        <hr />
                         <p className="text-sm text-gray-100 mb-4">Puedo contestar lo que necesites saber sobre José, como su experiencia laboral, sus habilidades, etc. ¿Cómo puedo ayudarte?</p>
 
-                        <div ref={listRef} className="w-full max-h-72 md:max-h-[700px] overflow-auto py-5 bg-gray-300 bg-opacity-10 my-5 rounded-2xl">
+                        <div ref={listRef} className="w-full max-h-52 md:max-h-[700px] overflow-auto py-5 bg-gray-300 bg-opacity-10 my-5 rounded-2xl">
                             {
                                 messages.length === 0 && (
                                     <p className="text-center w-full text-gray-100 opacity-20">Sin mensajes aún</p>
