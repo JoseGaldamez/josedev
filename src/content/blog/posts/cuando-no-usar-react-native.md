@@ -1,5 +1,5 @@
 ---
-title: "React Native no es el problema… el problema es no saber cuándo NO usarlo"
+title: "React Native: lo que nadie te dice hasta que ya es muy tarde"
 date: "2025-06-20"
 category: "Mobile"
 image: "https://res.cloudinary.com/jose-galdamez-dev/image/upload/f_auto,q_auto/v1/PersonalPage/blog/m5mcsx6zzr3alarltani"
