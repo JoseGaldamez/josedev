@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                             day: 'numeric'
                         })}</span>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-wrap mb-4">
                         {post.tags.map((tag) => (
                             <span
                                 key={tag}
