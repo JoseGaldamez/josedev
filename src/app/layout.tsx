@@ -7,7 +7,7 @@ import './v3.css';
 const inter = Poppins({ weight: ['100', '400', '300', "500", "700", "900"], subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Josá Galdámez | Fullstack Developer',
+  title: 'José Galdámez | Fullstack Developer',
   description: 'Desarrollador de aplicaciones web y móviles',
   openGraph: {
     images: "https://josegaldamez.dev/jose-portada.png"

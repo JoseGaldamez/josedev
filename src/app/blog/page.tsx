@@ -5,7 +5,7 @@ import { Header, Footer } from "@/components/v3";
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-    title: 'Blog | Josá Galdámez',
+    title: 'Blog | José Galdámez',
     description: 'Artículos y tutoriales sobre desarrollo de software',
 };
 
