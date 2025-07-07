@@ -6,7 +6,7 @@ import ProjectsSectionModern from '@/components/v3/ProjectsModern';
 
 
 export const metadata: Metadata = {
-    title: 'Josá Galdámez | Fullstack Developer',
+    title: 'José Galdámez | Fullstack Developer',
     description: 'Desarrollador de aplicaciones web y móviles',
     openGraph: {
         images: "https://josegaldamez.dev/jose-portada.png"
