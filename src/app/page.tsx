@@ -1,9 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next';
-import { Footer, Header, Hero, ProjectsSection, Student, WorkExperience, TechnologiesCarrucel } from '@/components/v3';
-import ProjectsSectionModern from '@/components/v3/ProjectsModern';
-
-
+import { HeaderV4 } from '@/components/v4/Header';
+import { HomeHeroV4 } from '@/components/v4/HomeHero';
 
 export const metadata: Metadata = {
     title: 'José Galdámez | Fullstack Developer',
@@ -13,20 +11,13 @@ export const metadata: Metadata = {
     }
 }
 
-
 const IndexHome = () => {
     return (
-        <main className='min-h-screen'>
-            <Header />
-            <Hero />
-            <WorkExperience />
-            <TechnologiesCarrucel />
-            <ProjectsSectionModern />
-            <Student />
-            <Footer />
+        <main className='min-h-screen bg-[#EBEBEB] text-[#253237] transition-colors duration-500'>
+            <HeaderV4 />
+            <HomeHeroV4 />
         </main>
     )
 }
-
 
 export default IndexHome;
