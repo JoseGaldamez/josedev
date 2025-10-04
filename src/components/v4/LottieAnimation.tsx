@@ -7,7 +7,7 @@ import Lottie from 'lottie-react';
 import animationData from './Man_Using_laptop.json'; 
 
 const style = {
-  height: 400,
+  height: 300,
 };
 
 const LottieAnimation = () => {

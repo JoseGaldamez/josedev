@@ -1,5 +1,8 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Poppins } from 'next/font/google'
+import { TooltipProvider } from "@/components/ui/tooltip"
+import { Toaster } from "@/components/ui/sonner"
+
 
 import './globals.css';
 //import './v3.css';
@@ -27,7 +30,10 @@ export default function RootLayout({
           crossOrigin="anonymous"></script>
       </head>
       <body className={inter.className}>
-        {children}
+        <TooltipProvider>
+          {children}
+        </TooltipProvider>
+          <Toaster/>
       </body>
       <GoogleAnalytics gaId='G-XPEDCTE08B' />
     </html>
