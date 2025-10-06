@@ -4,6 +4,8 @@ import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 import { Button } from '../ui/button'
 import { toast } from "sonner"
+import { sendMessage, sendMessageConfirm } from '@/server/sendMessage';
+import { buildMessage, buildMessageAdmin } from '@/utils/buildMessage';
 
 export const ContactForm = () => {
     const [name, setName] = useState('');
@@ -18,11 +20,18 @@ export const ContactForm = () => {
         setLoading(true);
         try {
             // Simulate an API call
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-            toast.success("Mensaje enviado exitosamente");
-            setName("");
-            setEmail("");
-            setMessage("");
+            const result = await sendMessage(buildMessageAdmin(name, email, message));
+            
+            if (!result || !result.success) {
+              toast.error("Error al enviar el mensaje");
+              return;
+            } else {
+              await sendMessageConfirm(buildMessage(name, email), email);
+              setName("");
+              setEmail("");
+              setMessage("");
+              toast.success("Mensaje enviado exitosamente");
+            }
         } catch (error) {
             console.error('Error al enviar el mensaje:', error);
         } finally {
@@ -32,9 +41,7 @@ export const ContactForm = () => {
 
 
   return (
-    <div className='max-w-3xl mx-auto pt-28'>
-        <h2 className='text-5xl font-bold mb-6'>Contáctame</h2> 
-        <hr className='border-b-2 border-gray-300' />
+    <div className='pt-10'>
         <form onSubmit={handleSubmit}>
             <div className='my-4'>
                 <label className='block text-gray-700 text-md font-bold mb-2' htmlFor='name'>Nombre</label>

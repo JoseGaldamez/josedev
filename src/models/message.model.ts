@@ -3,3 +3,9 @@ export interface Message {
     user: string;
     message: string;
 }
+
+export interface MessageAIChat {
+    id: string;
+    role: 'user' | 'assistant' | 'system';
+    content: string;
+}

@@ -26,7 +26,7 @@ export const BackgroundLetters = () => {
   ];
 
   return (
-    <div className='absolute z-0 opacity-40 inset-0 min-h-screen overflow-hidden pointer-events-none'>
+    <div className='absolute z-0 opacity-60 inset-0 min-h-screen overflow-hidden pointer-events-none'>
       <div className='relative w-full h-full z-0'>
         {technologies.map((tech, index) => (
           <div
@@ -49,7 +49,7 @@ export const BackgroundLetters = () => {
       <style jsx>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-8px); }
+          50% { transform: translateY(-18px); }
         }
         
         .absolute:nth-child(odd) {
