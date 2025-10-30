@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/sonner"
 
 
 import './globals.css';
-//import './v3.css';
 
 const inter = Poppins({ weight: ['100', '400', '300', "500", "700", "900"], subsets: ['latin'] })
 
