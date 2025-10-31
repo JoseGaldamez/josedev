@@ -1,5 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next';
+import { HeroSection } from '@/components/HeroSection';
+import { Topbar } from '@/components/Topbar';
 
 export const metadata: Metadata = {
     title: 'José Galdámez | Fullstack Developer',
@@ -11,8 +13,9 @@ export const metadata: Metadata = {
 
 const IndexHome = () => {
     return (
-        <main className='min-h-screen bg-[#f2f2f2] text-[#253237] transition-colors duration-500'>
-            Hola
+        <main className='min-h-screen bg-black text-[#f2f2f2] transition-colors duration-500'>
+            <Topbar />
+            <HeroSection />
         </main>
     )
 }

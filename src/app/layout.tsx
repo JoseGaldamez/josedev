@@ -1,12 +1,12 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { Poppins } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Toaster } from "@/components/ui/sonner"
 
 
 import './globals.css';
 
-const inter = Poppins({ weight: ['100', '400', '300', "500", "700", "900"], subsets: ['latin'] })
+const montserrat = Montserrat({ weight: ['100', '400', '300', "500", "700", "900"], subsets: ['latin'] })
 
 export const metadata = {
   title: 'José Galdámez | Fullstack Developer',
@@ -28,7 +28,7 @@ export default function RootLayout({
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2477956073542454"
           crossOrigin="anonymous"></script>
       </head>
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <TooltipProvider>
           {children}
         </TooltipProvider>
