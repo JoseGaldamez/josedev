@@ -4,7 +4,7 @@ import React from 'react'
 
 export const Topbar = () => {
   return (
-    <div className='bg-black text-white p-4 w-full flex justify-between items-center fixed top-0 z-50'>
+    <div className='backdrop-blur-sm text-white p-4 w-full flex justify-between items-center fixed top-0 z-50'>
       <h1 className='text-2xl font-light opacity-50 hover:opacity-100 transition-opacity duration-300'>JG</h1>
       <menu>
         <ul className='flex gap-4'>
