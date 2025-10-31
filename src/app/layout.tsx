@@ -28,7 +28,7 @@ export default function RootLayout({
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2477956073542454"
           crossOrigin="anonymous"></script>
       </head>
-      <body className={montserrat.className}>
+      <body className={`bg-black text-white ${montserrat.className}`}>
         <TooltipProvider>
           {children}
         </TooltipProvider>

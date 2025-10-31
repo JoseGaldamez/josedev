@@ -2,6 +2,7 @@ import React from 'react'
 import { Metadata } from 'next';
 import { HeroSection } from '@/components/HeroSection';
 import { Topbar } from '@/components/Topbar';
+import { IconsBanner } from '@/components/IconsBanner';
 
 export const metadata: Metadata = {
     title: 'José Galdámez | Fullstack Developer',
@@ -16,6 +17,7 @@ const IndexHome = () => {
         <main className='min-h-screen bg-black text-[#f2f2f2] transition-colors duration-500'>
             <Topbar />
             <HeroSection />
+            <IconsBanner />
         </main>
     )
 }
