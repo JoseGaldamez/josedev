@@ -25,7 +25,7 @@ export const HeroSection = () => {
             </h2>
         </div>
             </div>
-        <div className='max-w-3xl mx-auto mt-24 absolute bottom-2 left-0 right-0 px-4'>
+        <div className='max-w-3xl mx-auto mt-24 absolute bottom-16 md:bottom-5 left-0 right-0 px-4'>
             <p className='md:text-xl text-white/20 mb-3'>
                 Desarrollador de aplicaciones web y móviles con más de 5 años de experiencia en el desarrollo de soluciones digitales.
             </p>
