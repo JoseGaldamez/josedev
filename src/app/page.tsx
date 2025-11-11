@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const IndexHome = () => {
     return (
         <>
-            <Topbar />
+        <Topbar />
         <main className='min-h-screen bg-black text-[#f2f2f2] transition-colors duration-500'>
             <HeroSection />
             <IconsBanner />
