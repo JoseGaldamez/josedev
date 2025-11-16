@@ -10,9 +10,9 @@ export const HeroSection = () => {
           <Image 
             src="/jose.jpeg"
             alt="José Galdámez"
-            width={400}
-            height={400}
-            className="w-52 md:w-56 lg:w-72 2xl:w-96 object-cover"
+            width={350}
+            height={350}
+            className="w-40 md:w-48 lg:w-64 2xl:w-80 object-cover"
           />
           <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
         </div>

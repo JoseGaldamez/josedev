@@ -2,7 +2,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { Montserrat } from 'next/font/google'
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Toaster } from "@/components/ui/sonner"
-
+import { AuthProvider } from '@/hooks/useAuth'
 
 import './globals.css';
 
@@ -29,10 +29,12 @@ export default function RootLayout({
           crossOrigin="anonymous"></script>
       </head>
       <body className={`bg-black text-white ${montserrat.className}`}>
-        <TooltipProvider>
-          {children}
-        </TooltipProvider>
+        <AuthProvider>
+          <TooltipProvider>
+            {children}
+          </TooltipProvider>
           <Toaster/>
+        </AuthProvider>
       </body>
       <GoogleAnalytics gaId='G-XPEDCTE08B' />
     </html>
