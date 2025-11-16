@@ -1,12 +1,14 @@
 export interface Block {
   id: string;
-  type: 'heading' | 'paragraph' | 'image' | 'code' | 'list' | 'quote';
+  type: 'heading' | 'paragraph' | 'image' | 'code' | 'list' | 'quote' | 'button';
   level?: number;
   content?: string;
   src?: string;
   caption?: string;
   language?: string;
   items?: string[];
+  url?: string;
+  buttonText?: string;
 }
 
 export interface Post {

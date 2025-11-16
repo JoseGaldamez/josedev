@@ -18,20 +18,11 @@ import {
   Image as ImageIcon,
   Quote,
   List,
-  Heading
+  Heading,
+  MousePointer
 } from 'lucide-react';
 import { useFirestore } from '@/hooks/useFirestore';
-
-interface Block {
-  id: string;
-  type: 'heading' | 'paragraph' | 'image' | 'code' | 'list' | 'quote';
-  level?: number;
-  content?: string;
-  src?: string;
-  caption?: string;
-  language?: string;
-  items?: string[];
-}
+import { Block } from '@/types/blog';
 
 interface BlockEditorProps {
   block: Block;
@@ -110,6 +101,7 @@ export function BlockEditor({
       case 'code': return <Code className="w-4 h-4" />;
       case 'list': return <List className="w-4 h-4" />;
       case 'quote': return <Quote className="w-4 h-4" />;
+      case 'button': return <MousePointer className="w-4 h-4" />;
       default: return <Type className="w-4 h-4" />;
     }
   };
@@ -122,6 +114,7 @@ export function BlockEditor({
       case 'code': return 'Código';
       case 'list': return 'Lista';
       case 'quote': return 'Cita';
+      case 'button': return 'Botón';
       default: return 'Bloque';
     }
   };
@@ -386,6 +379,33 @@ export function BlockEditor({
                 rows={3}
                 className="italic"
               />
+            )}
+
+            {block.type === 'button' && (
+              <div className="space-y-3">
+                <Input
+                  value={block.buttonText || ''}
+                  onChange={(e) => onUpdate({ buttonText: e.target.value })}
+                  placeholder="Texto del botón..."
+                />
+                <Input
+                  value={block.url || ''}
+                  onChange={(e) => onUpdate({ url: e.target.value })}
+                  placeholder="https://ejemplo.com"
+                  type="url"
+                />
+                {(block.buttonText || block.url) && (
+                  <div className="p-3 bg-gray-50 rounded-lg border">
+                    <p className="text-sm text-gray-600 mb-2">Vista previa:</p>
+                    <button
+                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      disabled
+                    >
+                      {block.buttonText || 'Texto del botón'}
+                    </button>
+                  </div>
+                )}
+              </div>
             )}
           </div>
         </Card>

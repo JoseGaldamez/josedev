@@ -4,6 +4,9 @@ import { BlogCard } from '@/components/blog/BlogCard';
 import { getPublishedPosts } from '@/lib/firestore';
 import { Topbar } from '@/components/Topbar';
 
+// ISR: Revalidar cada 15 minutos (900 segundos)
+export const revalidate = 900;
+
 export const metadata: Metadata = {
   title: 'Blog - José Galdámez',
   description: 'Artículos sobre desarrollo web, tecnología y programación',

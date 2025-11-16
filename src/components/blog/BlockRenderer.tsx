@@ -2,17 +2,7 @@
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
-interface Block {
-  id: string;
-  type: 'heading' | 'paragraph' | 'image' | 'code' | 'list' | 'quote';
-  level?: number;
-  content?: string;
-  src?: string;
-  caption?: string;
-  language?: string;
-  items?: string[];
-}
+import { Block } from '@/types/blog';
 
 interface BlockRendererProps {
   block: Block;
@@ -32,6 +22,8 @@ export function BlockRenderer({ block }: BlockRendererProps) {
       return <ListBlock block={block} />;
     case 'quote':
       return <QuoteBlock block={block} />;
+    case 'button':
+      return <ButtonBlock block={block} />;
     default:
       return null;
   }
@@ -42,12 +34,12 @@ function HeadingBlock({ block }: { block: Block }) {
   
   const Tag = `h${level}` as keyof JSX.IntrinsicElements;
   const classes = {
-    1: 'text-4xl font-thin mb-6 px-5 text-white/80',
-    2: 'text-3xl font-thin mb-5 px-5 text-white/80',
-    3: 'text-2xl font-thin mb-4 px-5 text-white/80',
-    4: 'text-xl font-light mb-3 px-5 text-white/80',
-    5: 'text-lg font-light mb-2 px-5 text-white/80',
-    6: 'text-base font-light mb-2 px-5 text-white/80',
+    1: 'text-4xl font-thin mb-6 px-2 md:px-8 text-white/80',
+    2: 'text-3xl font-thin mb-5 px-2 md:px-8 text-white/80',
+    3: 'text-2xl font-thin mb-4 px-2 md:px-8 text-white/80',
+    4: 'text-xl font-light mb-3 px-2 md:px-8 text-white/80',
+    5: 'text-lg font-light mb-2 px-2 md:px-8 text-white/80',
+    6: 'text-base font-light mb-2 px-2 md:px-8 text-white/80',
   };
 
   return (
@@ -62,7 +54,7 @@ function ParagraphBlock({ block }: { block: Block }) {
   
   return (
     <div 
-      className="mb-4 px-5 text-lg text-white/60 leading-relaxed font-light"
+      className="mb-4 px-2 md:px-8 text-lg text-white/60 leading-relaxed font-light"
       dangerouslySetInnerHTML={{ __html: content }}
     />
   );
@@ -119,7 +111,7 @@ function ListBlock({ block }: { block: Block }) {
   if (items.length === 0) return null;
   
   return (
-    <ul className="mb-4 text-lg px-10 space-y-2">
+    <ul className="mb-4 text-lg px-2 md:px-16 space-y-2">
       {items.map((item, index) => (
         <li key={index} className="flex items-start">
           <span className="inline-block w-2 h-2 bg-white/50 rounded-full mt-2 mr-3 flex-shrink-0" />
@@ -140,5 +132,24 @@ function QuoteBlock({ block }: { block: Block }) {
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </blockquote>
+  );
+}
+
+function ButtonBlock({ block }: { block: Block }) {
+  const { buttonText = '', url = '' } = block;
+  
+  if (!buttonText || !url) return null;
+  
+  return (
+    <div className="mb-6 px-5">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block no-underline px-6 py-3 bg-white/10 text-white/80 border border-white/20 rounded-lg hover:bg-white/20 hover:text-white/90 transition-all duration-200 font-medium backdrop-blur-sm"
+      >
+        {buttonText}
+      </a>
+    </div>
   );
 }

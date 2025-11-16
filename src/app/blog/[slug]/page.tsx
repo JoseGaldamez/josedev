@@ -7,18 +7,27 @@ import { Post } from '@/types/blog';
 import { BlogPostSkeleton } from '@/components/blog/BlogPostSkeleton';
 import { Topbar } from '@/components/Topbar';
 
+// ISR: Revalidar cada 15 minutos (900 segundos)
+export const revalidate = 900;
+
 interface PageProps {
   params: {
     slug: string;
   };
 }
 
+// Generar páginas estáticas para posts existentes, pero permitir páginas dinámicas para nuevos posts
 export async function generateStaticParams() {
-  const posts = await getPublishedPosts();
-  
-  return posts?.map((post) => ({
-    slug: post.slug,
-  })) || [];
+  try {
+    const posts = await getPublishedPosts();
+    
+    return posts?.map((post) => ({
+      slug: post.slug,
+    })) || [];
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

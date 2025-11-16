@@ -2,27 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-
-interface Block {
-  id: string;
-  type: 'heading' | 'paragraph' | 'image' | 'code' | 'list' | 'quote';
-  level?: number;
-  content?: string;
-  src?: string;
-  caption?: string;
-  language?: string;
-  items?: string[];
-}
-
-interface EditorState {
-  title: string;
-  slug: string;
-  excerpt: string;
-  featuredImage: string;
-  categories: string[];
-  blocks: Block[];
-  status: 'draft' | 'published';
-}
+import { Block, EditorState } from '@/types/blog';
 
 const initialState: EditorState = {
   title: '',
@@ -64,6 +44,10 @@ export function useEditor(initialData?: Partial<EditorState>) {
         break;
       case 'list':
         newBlock.items = [''];
+        break;
+      case 'button':
+        newBlock.buttonText = '';
+        newBlock.url = '';
         break;
     }
 

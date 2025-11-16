@@ -123,6 +123,7 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
     { type: 'code', label: 'Código', icon: '<>' },
     { type: 'list', label: 'Lista', icon: '•' },
     { type: 'quote', label: 'Cita', icon: '"' },
+    { type: 'button', label: 'Botón', icon: '🔗' },
   ] as const;
 
   return (

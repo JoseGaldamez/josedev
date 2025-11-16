@@ -6,18 +6,27 @@ import { getPostsByCategory, getAllCategories } from '@/lib/firestore';
 import Link from 'next/link';
 import { Topbar } from '@/components/Topbar';
 
+// ISR: Revalidar cada 15 minutos (900 segundos)
+export const revalidate = 900;
+
 interface PageProps {
   params: {
     category: string;
   };
 }
 
+// Generar páginas estáticas para categorías existentes, pero permitir páginas dinámicas para nuevas categorías
 export async function generateStaticParams() {
-  const categories = await getAllCategories();
-  
-  return categories?.map((category) => ({
-    category: encodeURIComponent(category),
-  })) || [];
+  try {
+    const categories = await getAllCategories();
+    
+    return categories?.map((category) => ({
+      category: encodeURIComponent(category),
+    })) || [];
+  } catch (error) {
+    console.error('Error generating static params for categories:', error);
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

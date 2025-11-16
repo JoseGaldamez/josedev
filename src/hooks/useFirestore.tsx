@@ -13,31 +13,7 @@ import {
   getPostsByCategory,
   getAllCategories,
 } from '@/lib/firestore';
-
-interface Post {
-  id?: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  featuredImage: string;
-  categories: string[];
-  blocks: Block[];
-  status: 'draft' | 'published';
-  publishedAt: Date | null;
-  updatedAt: Date | null;
-  createdAt?: Date;
-}
-
-interface Block {
-  id: string;
-  type: 'heading' | 'paragraph' | 'image' | 'code' | 'list' | 'quote';
-  level?: number;
-  content?: string;
-  src?: string;
-  caption?: string;
-  language?: string;
-  items?: string[];
-}
+import { Post, Block } from '@/types/blog';
 
 export function useFirestore() {
   const [loading, setLoading] = useState(false);

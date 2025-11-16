@@ -22,13 +22,13 @@ export function BlogPost({ post }: BlogPostProps) {
 
   return (
     <>
-      <article className="max-w-4xl mx-auto px-4 py-8">
+      <article className="max-w-4xl mx-auto px-4 py-8 overflow-hidden">
         {/* Breadcrumbs */}
         <Breadcrumbs items={breadcrumbItems} generateStructuredData />
 
         {/* Header */}
         <header className="mb-8">
-          <h1 className="text-4xl md:text-4xl font-semibold text-white/80 mb-4 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-semibold text-white/80 mb-4 leading-tight break-words">
             {post.title}
           </h1>
         
@@ -40,12 +40,12 @@ export function BlogPost({ post }: BlogPostProps) {
           )}
           
           {post.categories.length > 0 && (
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 min-w-0">
               {post.categories.map((category) => (
                 <Link
                   key={category}
                   href={`/blog/category/${encodeURIComponent(category)}`}
-                  className="px-3 py-1 bg-white/10 text-white/70 rounded-full text-xs font-medium hover:bg-white/20 hover:text-white/90 transition-colors"
+                  className="px-3 py-1 bg-white/10 text-white/70 rounded-full text-xs font-medium hover:bg-white/20 hover:text-white/90 transition-colors flex-shrink-0"
                 >
                   {category}
                 </Link>
@@ -71,7 +71,7 @@ export function BlogPost({ post }: BlogPostProps) {
       </header>
 
       {/* Content */}
-      <div className="px-5 md:px-10 prose prose-invert max-w-none prose-headings:text-white/80 prose-headings:font-thin prose-p:text-white/60 prose-p:font-light prose-a:text-white/70 prose-a:hover:text-white/90 prose-strong:text-white/80 prose-code:text-white/80 prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10">
+      <div className="px-2 md:px-10 prose prose-invert max-w-none prose-headings:text-white/80 prose-headings:font-thin prose-p:text-white/60 prose-p:font-light prose-a:text-white/70 prose-a:hover:text-white/90 prose-strong:text-white/80 prose-code:text-white/80 prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10">
         {post.blocks.map((block) => (
           <BlockRenderer key={block.id} block={block} />
         ))}
