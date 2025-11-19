@@ -6,9 +6,6 @@ import { Topbar } from '@/components/Topbar';
 import { BlogGrid } from '@/components/blog/BlogGrid';
 import { BlogGridSkeleton } from '@/components/blog/BlogGridSkeleton';
 
-// ISR: Revalidar cada 15 minutos (900 segundos)
-export const revalidate = 900;
-
 export const metadata: Metadata = {
   title: 'Blog - José Galdámez',
   description: 'Artículos sobre desarrollo web, tecnología y programación',

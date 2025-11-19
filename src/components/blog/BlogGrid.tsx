@@ -1,10 +1,16 @@
 import { getPublishedPostsWithLimit } from '@/lib/firestore';
+import { unstable_cache } from 'next/cache';
 import React from 'react'
 import { BlogCard } from './BlogCard';
 
+const getCachedPosts = unstable_cache(
+    async (limit?: number) => getPublishedPostsWithLimit(limit),
+    ['blog-grid-posts'],
+    { revalidate: 900 }
+);
 
 export const BlogGrid = async ({ limit }: { limit?: number }) => {
-    const posts = await getPublishedPostsWithLimit(limit);
+    const posts = await getCachedPosts(limit);
 
     if (!posts || posts.length === 0) {
         return (
