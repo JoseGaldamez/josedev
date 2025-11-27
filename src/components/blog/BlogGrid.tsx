@@ -1,16 +1,22 @@
+'use client';
 import { getPublishedPostsWithLimit } from '@/lib/firestore';
-import { unstable_cache } from 'next/cache';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BlogCard } from './BlogCard';
+import { Post } from '@/types/blog';
 
-const getCachedPosts = unstable_cache(
-    async (limit?: number) => getPublishedPostsWithLimit(limit),
-    ['blog-grid-posts'],
-    { revalidate: 900 }
-);
 
-export const BlogGrid = async ({ limit }: { limit?: number }) => {
-    const posts = await getCachedPosts(limit);
+export const BlogGrid = ({ limit }: { limit?: number }) => {
+
+    const [posts, setPosts] = useState<Post[]>([]);
+
+    useEffect(() => {
+        getPosts();
+    }, []);
+
+    const getPosts = async () => {
+        const result = await getPublishedPostsWithLimit(limit);
+        setPosts(result);
+    }
 
     if (!posts || posts.length === 0) {
         return (

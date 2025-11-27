@@ -11,6 +11,9 @@ interface BlogCardProps {
 }
 
 export function BlogCard({ post }: BlogCardProps) {
+
+  console.log({ post });
+
   return (
     <article className="bg-black/50 backdrop-blur-sm border border-white/10 overflow-hidden hover:border-white/20 hover:bg-black/60 transition-all duration-300">
       {/* Featured Image */}
@@ -71,12 +74,9 @@ export function BlogCard({ post }: BlogCardProps) {
         {/* Footer */}
         <div className="flex items-center justify-between pt-4 border-t border-white/10">
           {post.publishedAt && (
-            <time
-              dateTime={post.publishedAt.toISOString()}
-              className="text-xs text-white/30"
-            >
+            <p className="text-xs text-white/30">
               {format(post.publishedAt, "d MMM yyyy", { locale: es })}
-            </time>
+            </p>
           )}
 
           <Link
