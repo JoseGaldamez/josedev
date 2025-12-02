@@ -1,10 +1,8 @@
 import { ContactForm } from "@/components/contact/ContactForm";
 import { SocialNetworks } from "@/components/contact/SocialNetworks";
 import { Topbar } from "@/components/Topbar";
-import { Button } from "@/components/ui/button";
 
-import { ArrowDownCircleIcon } from "lucide-react";
-import Link from "next/link";
+
 export default function Page() {
     return (
         <>

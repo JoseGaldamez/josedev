@@ -9,6 +9,7 @@ import './globals.css';
 const montserrat = Montserrat({ weight: ['100', '400', '300', "500", "700", "900"], subsets: ['latin'] })
 
 export const metadata = {
+  metadataBase: new URL('https://josegaldamez.dev'),
   title: 'José Galdámez | Fullstack Developer',
   description: 'Desarrollador de aplicaciones web y móviles',
   openGraph: {

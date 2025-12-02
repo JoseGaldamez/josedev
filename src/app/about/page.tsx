@@ -1,7 +1,21 @@
 import { HeaderSkill } from "@/components/skills/HeaderSkill";
 import { Topbar } from "@/components/Topbar";
 import { ArrowDownCircle, ArrowUpRight } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: 'José Galdámez | About Me',
+    description: 'Conoce más sobre José Galdámez, su experiencia y trayectoria como desarrollador Fullstack.',
+    openGraph: {
+        images: "https://josegaldamez.dev/jose-portada.png",
+        title: 'José Galdámez | About Me',
+        description: 'Conoce más sobre José Galdámez, su experiencia y trayectoria como desarrollador Fullstack.',
+    },
+    alternates: {
+        canonical: 'https://josegaldamez.dev/about',
+    }
+};
 
 export default function AboutPage() {
     return (

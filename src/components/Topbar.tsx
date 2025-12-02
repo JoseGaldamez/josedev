@@ -1,4 +1,4 @@
-import { AxeIcon, MailIcon, NotepadText, User2Icon } from 'lucide-react'
+import { AxeIcon, MailIcon, NotepadText, Play, PlayCircle, User2Icon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -11,6 +11,11 @@ export const Topbar = () => {
       </Link>
       <menu>
         <ul className='flex gap-4'>
+          <li>
+            <Link href="/courses" className='text-white/40 hover:text-white/80 transition-colors duration-300 font-extralight'>
+              <PlayCircle size={22} className="inline mb-1 mr-1 font-extralight" />
+            </Link>
+          </li>
           <li>
             <Link href="/blog" className='text-white/40 hover:text-white/80 transition-colors duration-300 font-extralight'>
               <NotepadText size={22} className="inline mb-1 mr-1 font-extralight" />

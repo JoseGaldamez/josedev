@@ -13,7 +13,12 @@ export const metadata: Metadata = {
     title: 'José Galdámez | Fullstack Developer',
     description: 'Desarrollador de aplicaciones web y móviles',
     openGraph: {
-        images: "https://josegaldamez.dev/jose-portada.png"
+        images: "https://josegaldamez.dev/jose-portada.png",
+        title: 'José Galdámez | Fullstack Developer',
+        description: 'Desarrollador de aplicaciones web y móviles',
+    },
+    alternates: {
+        canonical: 'https://josegaldamez.dev',
     }
 }
 

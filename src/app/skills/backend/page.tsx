@@ -3,6 +3,20 @@ import { HeaderSkill } from "@/components/skills/HeaderSkill";
 import { TechnologiesSkill } from "@/components/skills/TechnologiesSkill";
 import { Topbar } from "@/components/Topbar";
 import { SettingsIcon } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'José Galdámez | Backend Developer',
+    description: 'Desarrollador backend con experiencia en diversas tecnologías y empresas.',
+    openGraph: {
+        images: "https://josegaldamez.dev/jose-portada.png",
+        title: 'José Galdámez | Backend Developer',
+        description: 'Desarrollador backend con experiencia en diversas tecnologías y empresas.',
+    },
+    alternates: {
+        canonical: 'https://josegaldamez.dev/skills/backend',
+    }
+};
 
 const listTechnologies = [
     "Node.js",

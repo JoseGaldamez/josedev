@@ -4,6 +4,21 @@ import { TechnologiesSkill } from "@/components/skills/TechnologiesSkill";
 import { Topbar } from "@/components/Topbar";
 import { Code2Icon } from "lucide-react";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'José Galdámez | Frontend Developer',
+    description: 'Desarrollador frontend con experiencia en diversas tecnologías y empresas.',
+    openGraph: {
+        images: "https://josegaldamez.dev/jose-portada.png",
+        title: 'José Galdámez | Frontend Developer',
+        description: 'Desarrollador frontend con experiencia en diversas tecnologías y empresas.',
+    },
+    alternates: {
+        canonical: 'https://josegaldamez.dev/skills/frontend',
+    }
+};
+
 const listTechnologies = [
     "HTML5",
     "CSS3",

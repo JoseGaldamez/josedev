@@ -9,6 +9,14 @@ import { BlogGridSkeleton } from '@/components/blog/BlogGridSkeleton';
 export const metadata: Metadata = {
   title: 'Blog - José Galdámez',
   description: 'Artículos sobre desarrollo web, tecnología y programación',
+  openGraph: {
+    images: "https://josegaldamez.dev/jose-portada.png",
+    title: 'Blog - José Galdámez',
+    description: 'Artículos sobre desarrollo web, tecnología y programación',
+  },
+  alternates: {
+    canonical: 'https://josegaldamez.dev/blog',
+  }
 };
 
 export default async function BlogPage() {
