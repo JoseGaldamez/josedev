@@ -5,6 +5,7 @@ import { Topbar } from '@/components/Topbar';
 import { IconsBanner } from '@/components/IconsBanner';
 import { SkillsSection } from '@/components/SkillsSection';
 import { BlogHomeSection } from '@/components/BlogHomeSection';
+import { ProjectsHomeSection } from '@/components/ProjectsHomeSection';
 
 export const metadata: Metadata = {
     title: 'José Galdámez | Fullstack Developer',
@@ -27,6 +28,7 @@ const IndexHome = () => {
                 <HeroSection />
                 <IconsBanner />
                 <SkillsSection />
+                <ProjectsHomeSection />
                 <BlogHomeSection />
             </main>
         </>

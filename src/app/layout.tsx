@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google'
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Toaster } from "@/components/ui/sonner"
 import { AuthProvider } from '@/hooks/useAuth'
+import { Footer } from '@/components/Footer'
 
 import './globals.css';
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         <AuthProvider>
           <TooltipProvider>
             {children}
+            <Footer />
           </TooltipProvider>
           <Toaster/>
         </AuthProvider>

@@ -6,7 +6,7 @@ import { ArrowUpRight } from 'lucide-react'
 
 export const BlogHomeSection = () => {
     return (
-        <div className="max-w-6xl mx-auto px-4 py-24">
+        <div className="max-w-6xl mx-auto px-4 pt-24">
             <h2 className="text-4xl md:text-5xl font-thin text-white/70 mb-4">
                 Blog
             </h2>
