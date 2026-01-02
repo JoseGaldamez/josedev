@@ -26,13 +26,21 @@ const IndexHome = () => {
             <Topbar />
             <main className='min-h-screen bg-black text-[#f2f2f2] transition-colors duration-500'>
                 <HeroSection />
-                <IconsBanner />
-                <SkillsSection />
-                <ProjectsHomeSection />
-                <BlogHomeSection />
+                <div className='backdrop-blur-md py-20'>
+                    <IconsBanner />
+                    <SkillsSection />
+                    <ProjectsHomeSection />
+                    <BlogHomeSection />
+                </div>
             </main>
         </>
     )
 }
 
 export default IndexHome;
+
+
+/*
+
+
+                */

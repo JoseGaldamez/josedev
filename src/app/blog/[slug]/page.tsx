@@ -108,7 +108,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <>
     <Topbar />
-    <div className="min-h-screen bg-black text-[#f2f2f2] py-10">
+    <div className="min-h-screen bg-[#01050a] text-[#f2f2f2] py-10">
       <Suspense fallback={<BlogPostSkeleton />}>
         <BlogPostContent slug={params.slug} />
       </Suspense>

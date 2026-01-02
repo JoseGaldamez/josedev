@@ -6,7 +6,7 @@ export default function CoursesPage() {
     return (
         <>
             <Topbar />
-            <main className='min-h-screen bg-black text-[#f2f2f2] transition-colors duration-500'>
+            <main className='min-h-screen bg-[#01050a] text-[#f2f2f2] transition-colors duration-500'>
                 <div className="max-w-6xl mx-auto px-4 py-24">
                     {/* Hero Section */}
                     <div className="text-center mb-16">

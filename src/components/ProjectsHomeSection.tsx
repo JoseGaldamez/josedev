@@ -22,11 +22,11 @@ export const ProjectsHomeSection = () => {
     ];
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-24">
-            <h2 className="text-4xl md:text-5xl font-thin text-white/70 mb-4">
+        <div id='projects' className="max-w-6xl mx-auto px-4 py-32 rounded-3xl my-16" style={{ position: 'relative', zIndex: 50 }}>
+            <h2 className="text-4xl md:text-5xl font-thin text-white mb-4">
                 Proyectos
             </h2>
-            <p className="text-xl text-white/40 mb-8">
+            <p className="text-lg text-white mb-8">
                 Algunos de los proyectos en los que he trabajado, desde aplicaciones móviles hasta soluciones web empresariales.
             </p>
             
@@ -41,8 +41,8 @@ export const ProjectsHomeSection = () => {
                         className={`
                             px-6 py-2.5 rounded-lg font-medium transition-all duration-300
                             ${activeFilter === filter.value
-                                ? 'bg-white text-black shadow-lg shadow-white/20 scale-105'
-                                : 'bg-zinc-900 text-white/70 hover:text-white border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800'
+                                ? 'bg-white text-black border border-transparent scale-105'
+                                : 'bg-[#03060c] text-white hover:text-white border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800'
                             }
                         `}
                     >

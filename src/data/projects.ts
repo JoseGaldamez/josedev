@@ -1,15 +1,7 @@
 import { Project } from '@/types/project';
 
 export const projects: Project[] = [
-    {
-        id: '1',
-        title: 'E-commerce Octopus',
-        description: 'Aplicación de comercio electrónico completa con carrito de compras, pagos integrados y gestión de inventario.',
-        category: 'webapp',
-        image: './projects/octopus.png',
-        link: 'https://www.octopushn.com',
-        technologies: ['React Native', 'Node.js', 'Supabase']
-    },
+
     {
         id: '2',
         title: 'Radio Progreso Web',
@@ -54,5 +46,14 @@ export const projects: Project[] = [
         image: './projects/npme-extension.png',
         link: 'https://marketplace.visualstudio.com/items?itemName=josegaldamezdev.NPME',
         technologies: ['Next.js', 'Prisma', 'TailwindCSS', 'Vercel']
-    }
+    },
+        {
+        id: '1',
+        title: 'E-commerce Octopus',
+        description: 'Aplicación de comercio electrónico completa con carrito de compras, pagos integrados y gestión de inventario.',
+        category: 'webapp',
+        image: './projects/octopus.png',
+        link: 'https://www.octopushn.com',
+        technologies: ['React Native', 'Node.js', 'Supabase']
+    },
 ];

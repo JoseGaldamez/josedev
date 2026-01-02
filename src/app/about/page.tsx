@@ -21,10 +21,10 @@ export default function AboutPage() {
     return (
         <>
             <Topbar />
-            <main className='min-h-screen bg-black text-[#f2f2f2] transition-colors duration-500 mb-24 px-5'>
+            <main className='min-h-screen bg-[#01050a] text-[#f2f2f2] transition-colors duration-500 py-24 px-5'>
 
                 <div className="max-w-3xl mx-auto">
-                    <img src="/jose.jpeg" alt="José Galdámez" className="w-48 py-14" />
+                    <img src="/jose.jpeg" alt="José Galdámez" className="w-48 border rounded-xl border-gray-900 mb-8" />
                     <h2 className="text-5xl md:text-6xl font-thin mb-6 text-white/70">Un poco sobre mí</h2>
                     <p className="mt-4 text-lg leading-7 text-white/70">
                         ¡Hola! Soy José Galdámez, un desarrollador Fullstack especializado en crear soluciones web y móviles innovadoras. Con experiencia en tecnologías como React, Node.js, Angular, NextJS, Flutter, React Native y Spring Boot y bases de datos SQL y NoSQL. Me apasiona construir aplicaciones escalables y eficientes.

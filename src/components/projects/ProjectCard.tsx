@@ -13,7 +13,7 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     return (
         <div 
-            className="group relative bg-gradient-to-br from-zinc-900 to-black border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-600 transition-all duration-500 hover:shadow-2xl hover:shadow-zinc-900/50 hover:-translate-y-2"
+            className="group relative bg-gradient-to-br from-[#020816] to-[#03060c] border border-zinc-800 rounded overflow-hidden hover:border-zinc-600 transition-all duration-500 hover:shadow-2xl hover:shadow-zinc-900/50 hover:-translate-y-2"
             style={{
                 animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
             }}
@@ -21,11 +21,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             {/* Efecto de brillo al hover */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-            </div>
+                </div>
 
             {/* Imagen del proyecto */}
             <div className="relative h-48 bg-gradient-to-br from-black to-gray-900 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-8xl opacity-10">
+                <div className="absolute inset-0 flex items-center justify-center text-8xl opacity-50">
                    <img src={project.image} alt={project.title} />
                 </div>
                 {/* Badge de categoría */}

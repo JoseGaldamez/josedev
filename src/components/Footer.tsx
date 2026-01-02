@@ -57,8 +57,8 @@ export const Footer = () => {
     ];
 
     return (
-        <footer className="bg-gradient-to-b from-black to-zinc-950 border-t border-zinc-800">
-            <div className="max-w-6xl mx-auto px-4 py-12">
+        <footer className="bg-[#03060c] opacity-100 border-t border-white/5" style={{ position: 'relative', zIndex: 95 }} >
+            <div className="max-w-6xl mx-auto px-4 py-32">
                 {/* Top Section */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     {/* Brand */}
