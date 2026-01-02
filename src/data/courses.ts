@@ -27,7 +27,7 @@ export const udemyCourses: UdemyCourse[] = [
     duration: "20 horas",
     price: "$12.99",
     discount: "85% OFF",
-    udemyLink: "https://www.udemy.com/course/next-js-framework-de-produccion-para-reactjs/?couponCode=DICIEMBRE2025",
+    udemyLink: "https://www.udemy.com/course/next-js-framework-de-produccion-para-reactjs/?couponCode=ENERO2026",
   },
   {
     id: "2",
@@ -38,7 +38,18 @@ export const udemyCourses: UdemyCourse[] = [
     duration: "19 horas",
     price: "$12.99",
     discount: "80% OFF",
-    udemyLink: "https://www.udemy.com/course/android-con-jetpack-compose-movil-apps-nativas-y-modernas/?couponCode=DICIEMBRE2025",
+    udemyLink: "https://www.udemy.com/course/android-con-jetpack-compose-movil-apps-nativas-y-modernas/?couponCode=ENERO2026",
+  },
+  {
+    id: "3",
+    title: "Flutter 2024 GRATIS - Tu primera APP móvil desde cero",
+    description: "Aprende Flutter y Dart desde cero creando tu primera aplicación móvil. Curso gratuito con todo lo necesario para empezar en el desarrollo móvil.",
+    image: "https://img-c.udemycdn.com/course/750x422/5548580_c95a_2.jpg",
+    level: "Desde Cero",
+    duration: "2 horas",
+    price: "Gratis",
+    discount: "Gratis",
+    udemyLink: "https://www.udemy.com/course/flutter-2024-gratis-tu-primera-app-movil-desde-cero/?referralCode=007999DEB0FE9CCFABEA",
   },
 ];
 
