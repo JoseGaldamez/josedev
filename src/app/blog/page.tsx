@@ -23,7 +23,7 @@ export default async function BlogPage() {
   return (
     <>
       <Topbar />
-      <div className="min-h-screen bg-[#01050a] text-[#f2f2f2]">
+      <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)] text-[#f2f2f2]">
         <div className="max-w-6xl mx-auto px-4 py-12">
           {/* Header */}
           <header className="text-center my-12">

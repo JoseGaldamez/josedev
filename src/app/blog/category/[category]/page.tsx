@@ -19,7 +19,7 @@ interface PageProps {
 export async function generateStaticParams() {
   try {
     const categories = await getAllCategories();
-    
+
     return categories?.map((category) => ({
       category: encodeURIComponent(category),
     })) || [];
@@ -84,34 +84,34 @@ export default async function CategoryPage({ params }: PageProps) {
 
   return (
     <>
-    <Topbar />
-    <div className="min-h-screen bg-black text-[#f2f2f2] py-8">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Header */}
-        <header className="text-center mb-12">
-          <nav className="mb-4">
-            <Link 
-              href="/blog"
-              className="text-white/50 hover:text-white/80 font-light transition-colors"
-            >
-              ← Volver al blog
-            </Link>
-          </nav>
-          
-          <h1 className="text-4xl md:text-5xl font-thin text-white/70 mb-4">
-            Categoría: {category}
-          </h1>
-          <p className="text-xl text-white/40 max-w-2xl mx-auto font-light">
-            Todos los artículos relacionados con {category}
-          </p>
-        </header>
+      <Topbar />
+      <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)] text-[#f2f2f2] py-8">
+        <div className="max-w-6xl mx-auto px-4 py-12">
+          {/* Header */}
+          <header className="text-center mb-12">
+            <nav className="mb-4">
+              <Link
+                href="/blog"
+                className="text-white/50 hover:text-white/80 font-light transition-colors"
+              >
+                ← Volver al blog
+              </Link>
+            </nav>
 
-        {/* Posts Grid */}
-        <Suspense fallback={<CategoryGridSkeleton />}>
-          <CategoryGrid category={category} />
-        </Suspense>
+            <h1 className="text-4xl md:text-5xl font-thin text-white/70 mb-4">
+              Categoría: {category}
+            </h1>
+            <p className="text-xl text-white/40 max-w-2xl mx-auto font-light">
+              Todos los artículos relacionados con {category}
+            </p>
+          </header>
+
+          {/* Posts Grid */}
+          <Suspense fallback={<CategoryGridSkeleton />}>
+            <CategoryGrid category={category} />
+          </Suspense>
+        </div>
       </div>
-    </div>
     </>
   );
 }

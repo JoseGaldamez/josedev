@@ -21,7 +21,7 @@ export default function AboutPage() {
     return (
         <>
             <Topbar />
-            <main className='min-h-screen bg-[#01050a] text-[#f2f2f2] transition-colors duration-500 py-24 px-5'>
+            <main className='min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)] text-[#f2f2f2] transition-colors duration-500 py-24 px-5'>
 
                 <div className="max-w-3xl mx-auto">
                     <img src="/jose.jpeg" alt="José Galdámez" className="w-48 border rounded-xl border-gray-900 mb-8" />

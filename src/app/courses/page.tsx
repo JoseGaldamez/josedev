@@ -6,7 +6,7 @@ export default function CoursesPage() {
     return (
         <>
             <Topbar />
-            <main className='min-h-screen bg-[#01050a] text-[#f2f2f2] transition-colors duration-500'>
+            <main className='min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)] text-[#f2f2f2] transition-colors duration-500'>
                 <div className="max-w-6xl mx-auto px-4 py-24">
                     {/* Hero Section */}
                     <div className="text-center mb-16">
@@ -29,7 +29,7 @@ export default function CoursesPage() {
                                 Cursos completos con certificado y cupones de descuento especiales
                             </p>
                         </div>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {udemyCourses.map((course) => (
                                 <CourseCard

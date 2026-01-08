@@ -11,9 +11,9 @@ interface SlugEditorProps {
   baseUrl?: string;
 }
 
-export function SlugEditor({ 
-  value, 
-  onChange, 
+export function SlugEditor({
+  value,
+  onChange,
   placeholder = "url-del-post",
   label = "URL del post (slug)",
   baseUrl = "/blog"
@@ -24,20 +24,20 @@ export function SlugEditor({
       .toLowerCase()
       .replace(/[^a-z0-9-]/g, '-')
       .replace(/-+/g, '-');
-    
+
     onChange(sanitizedSlug);
   };
 
   return (
-    <Card className="p-6">
-      <label className="block text-sm font-medium text-gray-700 mb-2">
+    <Card className="p-6 bg-white/5 border-white/10">
+      <label className="block text-sm font-medium text-gray-300 mb-2">
         {label}
       </label>
       <Input
         value={value}
         onChange={(e) => handleSlugChange(e.target.value)}
         placeholder={placeholder}
-        className="font-mono"
+        className="font-mono bg-black/20 border-white/10 text-gray-300 placeholder:text-gray-600 focus:border-blue-500/50"
       />
       {value && (
         <p className="text-sm text-gray-500 mt-1">

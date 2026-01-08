@@ -44,7 +44,7 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
 
   const handleSave = async (status: 'draft' | 'published' = 'draft') => {
     setSaving(true);
-    
+
     try {
       // Generate slug if empty
       let slug = editorState.slug;
@@ -112,7 +112,7 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
 
   const handleDragEnd = (result: DropResult) => {
     if (!result.destination) return;
-    
+
     reorderBlocks(result.source.index, result.destination.index);
   };
 
@@ -158,11 +158,11 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
           />
 
           {/* Content Blocks */}
-          <Card className="p-6">
+          <Card className="p-6 bg-white/5 border-white/10">
             <div className="flex flex-col mb-6">
-              <h3 className="text-lg font-semibold pb-5">Contenido del post</h3>
-              
-              <div className="flex gap-2">
+              <h3 className="text-lg font-semibold pb-5 text-white">Contenido del post</h3>
+
+              <div className="flex gap-2 flex-wrap">
                 {blockTypes.map(({ type, label, icon }) => (
                   <Button
                     key={type}
@@ -170,6 +170,7 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
                     variant="outline"
                     size="sm"
                     title={`Agregar ${label}`}
+                    className="bg-transparent border-white/20 text-gray-300 hover:text-white hover:bg-white/10"
                   >
                     <span className="mr-1">{icon}</span>
                     {label}
@@ -207,46 +208,47 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
             </DragDropContext>
 
             {editorState.blocks.length === 0 && (
-              <div className="text-center py-12 border-2 border-dashed border-gray-300 rounded-lg">
-                <p className="text-gray-500 mb-4">
+              <div className="text-center py-12 border-2 border-dashed border-white/10 rounded-lg">
+                <p className="text-gray-400 mb-4">
                   Tu post está vacío. Agrega algunos bloques para empezar a escribir.
                 </p>
-                <Button onClick={() => addBlock('paragraph')} variant="outline">
+                <Button onClick={() => addBlock('paragraph')} variant="outline" className="border-white/20 text-white hover:bg-white/10 bg-transparent">
                   <Plus className="w-4 h-4 mr-2" />
                   Agregar primer párrafo
                 </Button>
               </div>
             )}
 
-            <div className="flex gap-2 my-8">
-                {blockTypes.map(({ type, label, icon }) => (
-                  <Button
-                    key={type}
-                    onClick={() => addBlock(type)}
-                    variant="outline"
-                    size="sm"
-                    title={`Agregar ${label}`}
-                  >
-                    <span className="mr-1">{icon}</span>
-                    {label}
-                  </Button>
-                ))}
-              </div>
+            <div className="flex gap-2 my-8 flex-wrap">
+              {blockTypes.map(({ type, label, icon }) => (
+                <Button
+                  key={type}
+                  onClick={() => addBlock(type)}
+                  variant="outline"
+                  size="sm"
+                  title={`Agregar ${label}`}
+                  className="bg-transparent border-white/20 text-gray-300 hover:text-white hover:bg-white/10"
+                >
+                  <span className="mr-1">{icon}</span>
+                  {label}
+                </Button>
+              ))}
+            </div>
           </Card>
         </div>
 
         {/* Sidebar */}
         <div className="space-y-6">
           {/* Featured Image */}
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold mb-4">Imagen destacada</h3>
-            
+          <Card className="p-6 bg-white/5 border-white/10">
+            <h3 className="text-lg font-semibold mb-4 text-white">Imagen destacada</h3>
+
             {editorState.featuredImage ? (
               <div className="space-y-3">
                 <img
                   src={editorState.featuredImage}
                   alt="Featured"
-                  className="w-full h-32 object-cover rounded-lg"
+                  className="w-full h-32 object-cover rounded-lg border border-white/10"
                 />
                 <div className="flex gap-2">
                   <Button
@@ -254,6 +256,7 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
                     variant="outline"
                     size="sm"
                     disabled={imageUploading}
+                    className="border-white/20 text-white hover:bg-white/10 bg-transparent flex-1"
                   >
                     Cambiar
                   </Button>
@@ -261,6 +264,7 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
                     onClick={() => updateField('featuredImage', '')}
                     variant="destructive"
                     size="sm"
+                    className="bg-red-900/50 text-red-200 hover:bg-red-900/80 border border-red-900"
                   >
                     Eliminar
                   </Button>
@@ -271,13 +275,13 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
                 onClick={() => featuredImageRef.current?.click()}
                 variant="outline"
                 disabled={imageUploading}
-                className="w-full"
+                className="w-full h-32 border-dashed border-white/20 text-gray-400 hover:text-white hover:bg-white/5 bg-transparent flex flex-col items-center justify-center gap-2"
               >
-                <Upload className="w-4 h-4 mr-2" />
+                <Upload className="w-6 h-6" />
                 {imageUploading ? 'Subiendo...' : 'Subir imagen'}
               </Button>
             )}
-            
+
             <input
               ref={featuredImageRef}
               type="file"
@@ -288,9 +292,9 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
           </Card>
 
           {/* Categories */}
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold mb-4">Categorías</h3>
-            
+          <Card className="p-6 bg-white/5 border-white/10">
+            <h3 className="text-lg font-semibold mb-4 text-white">Categorías</h3>
+
             <div className="space-y-3">
               <div className="flex gap-2">
                 <Input
@@ -298,19 +302,20 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
                   onChange={(e) => setNewCategory(e.target.value)}
                   placeholder="Nueva categoría"
                   onKeyPress={(e) => e.key === 'Enter' && addCategory()}
+                  className="bg-black/20 border-white/10 text-white placeholder:text-gray-500"
                 />
-                <Button onClick={addCategory} size="sm">
+                <Button onClick={addCategory} size="sm" className="bg-white/10 hover:bg-white/20 text-white">
                   <Plus className="w-4 h-4" />
                 </Button>
               </div>
-              
+
               {editorState.categories.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {editorState.categories.map((category) => (
                     <Badge
                       key={category}
                       variant="secondary"
-                      className="cursor-pointer hover:bg-red-100 hover:text-red-800"
+                      className="cursor-pointer bg-white/10 text-gray-300 hover:bg-red-900/40 hover:text-red-200 border border-white/5"
                       onClick={() => removeCategory(category)}
                     >
                       {category} ×
@@ -323,8 +328,8 @@ export function PostEditor({ initialData, isEditing = false, onSave }: EditorPro
 
           {/* Save Status */}
           {hasUnsavedChanges(initialData) && (
-            <Card className="p-4 bg-yellow-50 border-yellow-200">
-              <p className="text-sm text-yellow-800">
+            <Card className="p-4 bg-yellow-900/20 border-yellow-700/50">
+              <p className="text-sm text-yellow-500">
                 ⚠️ Hay cambios sin guardar
               </p>
             </Card>
