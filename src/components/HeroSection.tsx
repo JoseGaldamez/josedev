@@ -185,7 +185,7 @@ export const HeroSection = () => {
 
 
       <div className="relative z-10">
-        <section className="h-screen flex items-center justify-center px-6 mt-24">
+        <section className="h-screen flex items-center justify-center px-6 mt-18">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -206,9 +206,9 @@ export const HeroSection = () => {
               </motion.div>
 
               <div className="space-y-6">
-                <h1 className="text-2xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter leading-[0.85]">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter leading-[0.85]">
                   JOSÉ<br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30">GALDAMEZ</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-blue-300/20">GALDAMEZ</span>
                 </h1>
 
                 <p className="text-slate-400 text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
@@ -224,7 +224,7 @@ export const HeroSection = () => {
                   </a>
                 </div>
 
-                <div className='flex items-center justify-center gap-4 pt-4'>
+                <div className='flex items-center justify-center gap-2 md:gap-4 pt-4'>
                   <a
                     href="https://github.com/josegaldamez"
                     target="_blank"
@@ -232,7 +232,7 @@ export const HeroSection = () => {
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="GitHub"
                   >
-                    <Github size={20} />
+                    <Github className='w-4 h-4 md:w-6 md:h-6' />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/josegaldamezdev"
@@ -241,7 +241,7 @@ export const HeroSection = () => {
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin size={20} />
+                    <Linkedin className='w-4 h-4 md:w-6 md:h-6' />
                   </a>
                   <a
                     href="https://www.facebook.com/josegaldamezdev"
@@ -250,7 +250,7 @@ export const HeroSection = () => {
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="Facebook"
                   >
-                    <Facebook size={20} />
+                    <Facebook className='w-4 h-4 md:w-6 md:h-6' />
                   </a>
                   <a
                     href="https://twitter.com/josegaldamezdev"
@@ -259,7 +259,7 @@ export const HeroSection = () => {
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="Twitter"
                   >
-                    <Twitter size={20} />
+                    <Twitter className='w-4 h-4 md:w-6 md:h-6' />
                   </a>
                   <a
                     href="https://www.youtube.com/@josegaldamez-dev"
@@ -268,14 +268,14 @@ export const HeroSection = () => {
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="YouTube"
                   >
-                    <Youtube size={20} />
+                    <Youtube className='w-4 h-4 md:w-6 md:h-6' />
                   </a>
                   <a
                     href="mailto:contact@josegaldamez.com"
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="Email"
                   >
-                    <Mail size={20} />
+                    <Mail className='w-4 h-4 md:w-6 md:h-6' />
                   </a>
                 </div>
               </div>
