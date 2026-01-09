@@ -10,22 +10,22 @@ interface TitleEditorProps {
   label?: string;
 }
 
-export function TitleEditor({ 
-  value, 
-  onChange, 
+export function TitleEditor({
+  value,
+  onChange,
   placeholder = "Escribe el título de tu post...",
   label = "Título del post"
 }: TitleEditorProps) {
   return (
-    <Card className="p-6">
-      <label className="block text-sm font-medium text-gray-700 mb-2">
+    <Card className="p-6 bg-white/5 border-white/10">
+      <label className="block text-sm font-medium text-gray-300 mb-2">
         {label}
       </label>
       <Input
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="!text-2xl font-bold border-none p-2 !focus:ring-0"
+        className="!text-2xl font-bold border-none p-2 !focus:ring-0 bg-transparent text-white placeholder:text-gray-600"
       />
     </Card>
   );

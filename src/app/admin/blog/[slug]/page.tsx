@@ -48,28 +48,28 @@ export default function EditPostPage({ params }: PageProps) {
     return (
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <div className="w-48 h-8 bg-gray-200 rounded animate-pulse" />
+          <div className="w-48 h-8 bg-gray-800 rounded animate-pulse" />
           <div className="flex gap-3">
-            <div className="w-32 h-10 bg-gray-200 rounded animate-pulse" />
-            <div className="w-24 h-10 bg-gray-200 rounded animate-pulse" />
+            <div className="w-32 h-10 bg-gray-800 rounded animate-pulse" />
+            <div className="w-24 h-10 bg-gray-800 rounded animate-pulse" />
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-6">
             {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="bg-white rounded-lg border p-6">
-                <div className="w-32 h-4 bg-gray-200 rounded animate-pulse mb-3" />
-                <div className="w-full h-10 bg-gray-200 rounded animate-pulse" />
+              <div key={i} className="bg-white/5 rounded-lg border border-white/10 p-6">
+                <div className="w-32 h-4 bg-gray-800 rounded animate-pulse mb-3" />
+                <div className="w-full h-10 bg-gray-800 rounded animate-pulse" />
               </div>
             ))}
           </div>
-          
+
           <div className="space-y-6">
             {Array.from({ length: 2 }).map((_, i) => (
-              <div key={i} className="bg-white rounded-lg border p-6">
-                <div className="w-24 h-5 bg-gray-200 rounded animate-pulse mb-4" />
-                <div className="w-full h-32 bg-gray-200 rounded animate-pulse" />
+              <div key={i} className="bg-white/5 rounded-lg border border-white/10 p-6">
+                <div className="w-24 h-5 bg-gray-800 rounded animate-pulse mb-4" />
+                <div className="w-full h-32 bg-gray-800 rounded animate-pulse" />
               </div>
             ))}
           </div>

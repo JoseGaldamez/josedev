@@ -1,15 +1,15 @@
 'use client';
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, useScroll } from 'framer-motion';
-import { 
-  ChevronRight, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Hexagon, 
-  Code2, 
-  Cpu, 
-  Terminal, 
+import {
+  ChevronRight,
+  Globe,
+  Zap,
+  Shield,
+  Hexagon,
+  Code2,
+  Cpu,
+  Terminal,
   Sparkles,
   ExternalLink,
   Github,
@@ -49,7 +49,7 @@ const ParallaxLayer = ({ children, factor, mouseX, mouseY, initialOffset = { x: 
 
 const SectionTitle = ({ subtitle, title }: { subtitle: string; title: string }) => (
   <div className="mb-12 space-y-2">
-    <motion.span 
+    <motion.span
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
@@ -57,7 +57,7 @@ const SectionTitle = ({ subtitle, title }: { subtitle: string; title: string }) 
     >
       {subtitle}
     </motion.span>
-    <motion.h2 
+    <motion.h2
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -77,7 +77,7 @@ export const HeroSection = () => {
 
   const smoothX = useSpring(mouseX, { damping: 50, stiffness: 200 });
   const smoothY = useSpring(mouseY, { damping: 50, stiffness: 200 });
-  
+
   const bgOpacity = useTransform(scrollYProgress, [0, 0.2], [0.4, 0.15]);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -122,13 +122,13 @@ export const HeroSection = () => {
 
   return (
     <div ref={containerRef} className="relative text-slate-300 font-sans selection:bg-blue-500/30">
-      
+
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <motion.div 
+        <motion.div
           style={{ opacity: bgOpacity }}
-          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)]" 
+          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)]"
         />
-        
+
         {/* NIVEL 1: FONDO PROFUNDO */}
         <ParallaxLayer factor={0.2} mouseX={smoothX} mouseY={smoothY}>
           <div className="w-[1800px] h-[1800px] bg-blue-600/5 rounded-full blur-[200px]" />
@@ -136,11 +136,11 @@ export const HeroSection = () => {
 
         {/* ETIQUETAS DE TEXTO VISIBLES */}
         {floatingKeywords.map((item, i) => (
-          <ParallaxLayer 
-            key={`word-${i}`} 
-            factor={item.f} 
-            mouseX={smoothX} 
-            mouseY={smoothY} 
+          <ParallaxLayer
+            key={`word-${i}`}
+            factor={item.f}
+            mouseX={smoothX}
+            mouseY={smoothY}
             initialOffset={{ x: item.x, y: item.y }}
           >
             <span className="text-[11px] font-mono font-black text-white/10 tracking-[0.6em] uppercase select-none">
@@ -151,11 +151,11 @@ export const HeroSection = () => {
 
         {/* ICONOS DE DESARROLLO VISIBLES */}
         {centerIcons.map((item, i) => (
-          <ParallaxLayer 
-            key={`icon-${i}`} 
-            factor={item.f} 
-            mouseX={smoothX} 
-            mouseY={smoothY} 
+          <ParallaxLayer
+            key={`icon-${i}`}
+            factor={item.f}
+            mouseX={smoothX}
+            mouseY={smoothY}
             initialOffset={{ x: item.x, y: item.y }}
           >
             <item.Icon size={item.s} strokeWidth={0.8} style={{ opacity: item.op }} className="text-blue-400" />
@@ -164,13 +164,13 @@ export const HeroSection = () => {
 
         {/* LAS ESTRELLAS (Mantenidas como pediste) */}
         {[...Array(40)].map((_, i) => (
-          <ParallaxLayer 
-            key={`star-${i}`} 
-            factor={1.5 + (Math.random() * 2.5)} 
-            mouseX={smoothX} 
-            mouseY={smoothY} 
+          <ParallaxLayer
+            key={`star-${i}`}
+            factor={1.5 + (Math.random() * 2.5)}
+            mouseX={smoothX}
+            mouseY={smoothY}
             initialOffset={{
-              x: (Math.random() - 0.5) * 2000, 
+              x: (Math.random() - 0.5) * 2000,
               y: (Math.random() - 0.5) * 1800
             }}
           >
@@ -182,20 +182,20 @@ export const HeroSection = () => {
         ))}
 
       </div>
-      
+
 
       <div className="relative z-10">
-        <section className="h-screen flex items-center justify-center px-6">
-          <motion.div 
+        <section className="h-screen flex items-center justify-center px-6 mt-24">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5 }}
             className="w-full max-w-4xl"
           >
-            <div className="relative bg-[#080808]/40 backdrop-blur-[80px] border border-white/5 rounded-[3.5rem] p-10 md:p-16 shadow-2xl text-center overflow-hidden">
+            <div className="relative bg-[#080808]/40 backdrop-blur-[80px] border border-white/5 rounded-[3.5rem] p-4 md:p-10 lg:p-16 shadow-2xl text-center overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
@@ -206,11 +206,11 @@ export const HeroSection = () => {
               </motion.div>
 
               <div className="space-y-6">
-                <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.85]">
-                  JOSÉ<br/>
+                <h1 className="text-2xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter leading-[0.85]">
+                  JOSÉ<br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30">GALDAMEZ</span>
                 </h1>
-                
+
                 <p className="text-slate-400 text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
                   Desarrollador Fullstack con más de 5 años de experiencia, especializado en crear aplicaciones web y móviles escalables orientadas a la nube.
                 </p>
@@ -225,53 +225,53 @@ export const HeroSection = () => {
                 </div>
 
                 <div className='flex items-center justify-center gap-4 pt-4'>
-                  <a 
-                    href="https://github.com/josegaldamez" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com/josegaldamez"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="GitHub"
                   >
                     <Github size={20} />
                   </a>
-                  <a 
-                    href="https://www.linkedin.com/in/josegaldamezdev" 
-                    target="_blank" 
+                  <a
+                    href="https://www.linkedin.com/in/josegaldamezdev"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="LinkedIn"
                   >
                     <Linkedin size={20} />
                   </a>
-                  <a 
-                    href="https://www.facebook.com/josegaldamezdev" 
-                    target="_blank" 
+                  <a
+                    href="https://www.facebook.com/josegaldamezdev"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="Facebook"
                   >
                     <Facebook size={20} />
                   </a>
-                  <a 
-                    href="https://twitter.com/josegaldamezdev" 
-                    target="_blank" 
+                  <a
+                    href="https://twitter.com/josegaldamezdev"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="Twitter"
                   >
                     <Twitter size={20} />
                   </a>
-                  <a 
-                    href="https://www.youtube.com/@josegaldamez-dev" 
-                    target="_blank" 
+                  <a
+                    href="https://www.youtube.com/@josegaldamez-dev"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="YouTube"
                   >
                     <Youtube size={20} />
                   </a>
-                  <a 
-                    href="mailto:contact@josegaldamez.com" 
+                  <a
+                    href="mailto:contact@josegaldamez.com"
                     className="p-3 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                     aria-label="Email"
                   >
@@ -281,7 +281,7 @@ export const HeroSection = () => {
               </div>
             </div>
 
-            <motion.div 
+            <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="mt-16 flex flex-col items-center gap-2 text-slate-600"
@@ -292,6 +292,6 @@ export const HeroSection = () => {
           </motion.div>
         </section>
       </div>
-  </div>
+    </div>
   )
 }

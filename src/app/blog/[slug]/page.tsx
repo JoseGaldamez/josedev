@@ -20,7 +20,7 @@ interface PageProps {
 export async function generateStaticParams() {
   try {
     const posts = await getPublishedPosts();
-    
+
     return posts?.map((post) => ({
       slug: post.slug,
     })) || [];
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const baseUrl = 'https://josegaldamez.dev';
   const canonicalUrl = `${baseUrl}/blog/${post.slug}`;
-  
+
   return {
     title: `${post.title} - José Galdámez`,
     description: post.excerpt || `Lee el artículo completo sobre ${post.title}. Desarrollador Full Stack especializado en React, Next.js y tecnologías modernas.`,
@@ -107,12 +107,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function BlogPostPage({ params }: PageProps) {
   return (
     <>
-    <Topbar />
-    <div className="min-h-screen bg-[#01050a] text-[#f2f2f2] py-10">
-      <Suspense fallback={<BlogPostSkeleton />}>
-        <BlogPostContent slug={params.slug} />
-      </Suspense>
-    </div>
+      <Topbar />
+      <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)] text-[#f2f2f2] py-10">
+        <Suspense fallback={<BlogPostSkeleton />}>
+          <BlogPostContent slug={params.slug} />
+        </Suspense>
+      </div>
     </>
   );
 }
@@ -125,7 +125,7 @@ async function BlogPostContent({ slug }: { slug: string }) {
   }
 
   const baseUrl = 'https://josegaldamez.dev';
-  
+
   // Structured Data for SEO
   const structuredData = {
     '@context': 'https://schema.org',

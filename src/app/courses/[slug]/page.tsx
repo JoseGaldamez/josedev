@@ -41,7 +41,7 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
   return (
     <>
       <Topbar />
-      <main className="min-h-screen bg-black text-[#f2f2f2]">
+      <main className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)] text-[#f2f2f2]">
         <div className="container mx-auto px-4 py-24">
           {/* Breadcrumb */}
           <div className="mb-8">
@@ -62,7 +62,7 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
               <p className="text-xl text-zinc-400 mb-6">
                 {course.description}
               </p>
-              
+
               <div className="flex flex-wrap gap-3 mb-8">
                 <Badge variant="outline" className="border-zinc-700 text-zinc-400 text-sm py-2 px-4">
                   📚 {course.level}

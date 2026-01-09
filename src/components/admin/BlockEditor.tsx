@@ -6,12 +6,12 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { Draggable } from 'react-beautiful-dnd';
-import { 
-  GripVertical, 
-  Trash2, 
-  ChevronUp, 
-  ChevronDown, 
-  Copy, 
+import {
+  GripVertical,
+  Trash2,
+  ChevronUp,
+  ChevronDown,
+  Copy,
   Upload,
   Code,
   Type,
@@ -125,7 +125,7 @@ export function BlockEditor({
         <Card
           ref={provided.innerRef}
           {...provided.draggableProps}
-          className="p-4 hover:shadow-md transition-shadow"
+          className="p-4 hover:shadow-md transition-shadow bg-black/40 border-white/20"
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-4">
@@ -133,44 +133,47 @@ export function BlockEditor({
               <div {...provided.dragHandleProps} className="cursor-move">
                 <GripVertical className="w-4 h-4 text-gray-400" />
               </div>
-              {getBlockIcon()}
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-gray-400">{getBlockIcon()}</span>
+              <span className="text-sm font-medium text-gray-300">
                 {getBlockTitle()}
               </span>
             </div>
-            
+
             <div className="flex items-center gap-1">
               <Button
                 onClick={onMoveUp}
                 disabled={!canMoveUp}
                 variant="ghost"
                 size="sm"
+                className="text-gray-400 hover:text-white hover:bg-white/10"
               >
                 <ChevronUp className="w-4 h-4" />
               </Button>
-              
+
               <Button
                 onClick={onMoveDown}
                 disabled={!canMoveDown}
                 variant="ghost"
                 size="sm"
+                className="text-gray-400 hover:text-white hover:bg-white/10"
               >
                 <ChevronDown className="w-4 h-4" />
               </Button>
-              
+
               <Button
                 onClick={onDuplicate}
                 variant="ghost"
                 size="sm"
+                className="text-gray-400 hover:text-white hover:bg-white/10"
               >
                 <Copy className="w-4 h-4" />
               </Button>
-              
+
               <Button
                 onClick={onDelete}
                 variant="ghost"
                 size="sm"
-                className="text-red-600 hover:text-red-800"
+                className="text-red-400 hover:text-red-300 hover:bg-red-900/20"
               >
                 <Trash2 className="w-4 h-4" />
               </Button>
@@ -182,11 +185,11 @@ export function BlockEditor({
             {block.type === 'heading' && (
               <>
                 <div className="flex gap-2 mb-2">
-                  <label className="text-sm font-medium text-gray-700">Nivel:</label>
+                  <label className="text-sm font-medium text-gray-400">Nivel:</label>
                   <select
                     value={block.level || 2}
                     onChange={(e) => onUpdate({ level: parseInt(e.target.value) })}
-                    className="text-sm border border-gray-300 rounded px-2 py-1"
+                    className="text-sm border border-white/10 rounded px-2 py-1 bg-black/40 text-white focus:outline-none focus:border-blue-500/50"
                   >
                     {[1, 2, 3, 4, 5, 6].map((level) => (
                       <option key={level} value={level}>H{level}</option>
@@ -197,7 +200,7 @@ export function BlockEditor({
                   value={block.content || ''}
                   onChange={(e) => onUpdate({ content: e.target.value })}
                   placeholder="Escribe el título..."
-                  className="text-lg font-semibold"
+                  className="text-lg font-semibold bg-black/20 border-white/10 text-white placeholder:text-gray-600 focus:border-blue-500/50"
                 />
               </>
             )}
@@ -208,6 +211,7 @@ export function BlockEditor({
                 onChange={(e) => onUpdate({ content: e.target.value })}
                 placeholder="Escribe tu párrafo aquí..."
                 rows={4}
+                className="bg-black/20 border-white/10 text-gray-200 placeholder:text-gray-600 focus:border-blue-500/50"
               />
             )}
 
@@ -218,7 +222,7 @@ export function BlockEditor({
                     <img
                       src={block.src}
                       alt={block.caption || 'Blog image'}
-                      className="w-full h-48 object-cover rounded-lg border"
+                      className="w-full h-48 object-cover rounded-lg border border-white/10"
                     />
                     <div className="flex gap-2">
                       <Button
@@ -226,6 +230,7 @@ export function BlockEditor({
                         variant="outline"
                         size="sm"
                         disabled={uploading}
+                        className="bg-transparent border-white/20 text-white hover:bg-white/10"
                       >
                         Cambiar imagen
                       </Button>
@@ -233,6 +238,7 @@ export function BlockEditor({
                         onClick={() => onUpdate({ src: '' })}
                         variant="destructive"
                         size="sm"
+                        className="bg-red-900/50 text-red-200 border border-red-900 hover:bg-red-900/80"
                       >
                         Eliminar
                       </Button>
@@ -246,6 +252,7 @@ export function BlockEditor({
                         onClick={() => setImageInputMode('upload')}
                         variant={imageInputMode === 'upload' ? 'default' : 'outline'}
                         size="sm"
+                        className={imageInputMode === 'upload' ? 'bg-blue-600 text-white' : 'bg-transparent border-white/20 text-gray-300 hover:text-white'}
                       >
                         <Upload className="w-4 h-4 mr-2" />
                         Subir archivo
@@ -254,6 +261,7 @@ export function BlockEditor({
                         onClick={() => setImageInputMode('url')}
                         variant={imageInputMode === 'url' ? 'default' : 'outline'}
                         size="sm"
+                        className={imageInputMode === 'url' ? 'bg-blue-600 text-white' : 'bg-transparent border-white/20 text-gray-300 hover:text-white'}
                       >
                         <ImageIcon className="w-4 h-4 mr-2" />
                         URL directa
@@ -265,7 +273,7 @@ export function BlockEditor({
                         onClick={() => fileInputRef.current?.click()}
                         variant="outline"
                         disabled={uploading}
-                        className="w-full h-32 border-dashed"
+                        className="w-full h-32 border-dashed border-white/20 text-gray-400 hover:text-white hover:bg-white/5 bg-transparent"
                       >
                         <Upload className="w-6 h-6 mr-2" />
                         {uploading ? 'Subiendo...' : 'Subir imagen desde archivo'}
@@ -276,6 +284,7 @@ export function BlockEditor({
                           value={urlInput}
                           onChange={(e) => setUrlInput(e.target.value)}
                           placeholder="https://ejemplo.com/imagen.jpg"
+                          className="bg-black/20 border-white/10 text-white placeholder:text-gray-600"
                           onKeyDown={(e) => {
                             if (e.key === 'Enter') {
                               handleUrlSubmit();
@@ -285,7 +294,7 @@ export function BlockEditor({
                         <Button
                           onClick={handleUrlSubmit}
                           disabled={!urlInput.trim()}
-                          className="w-full"
+                          className="w-full bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           Usar esta URL
                         </Button>
@@ -293,13 +302,14 @@ export function BlockEditor({
                     )}
                   </div>
                 )}
-                
+
                 <Input
                   value={block.caption || ''}
                   onChange={(e) => onUpdate({ caption: e.target.value })}
                   placeholder="Descripción de la imagen (opcional)"
+                  className="bg-black/20 border-white/10 text-white placeholder:text-gray-600"
                 />
-                
+
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -313,11 +323,11 @@ export function BlockEditor({
             {block.type === 'code' && (
               <div className="space-y-3">
                 <div className="flex gap-2">
-                  <label className="text-sm font-medium text-gray-700">Lenguaje:</label>
+                  <label className="text-sm font-medium text-gray-400">Lenguaje:</label>
                   <select
                     value={block.language || 'javascript'}
                     onChange={(e) => onUpdate({ language: e.target.value })}
-                    className="text-sm border border-gray-300 rounded px-2 py-1"
+                    className="text-sm border border-white/10 rounded px-2 py-1 bg-black/40 text-white focus:outline-none focus:border-blue-500/50"
                   >
                     <option value="javascript">JavaScript</option>
                     <option value="typescript">TypeScript</option>
@@ -336,7 +346,7 @@ export function BlockEditor({
                   onChange={(e) => onUpdate({ content: e.target.value })}
                   placeholder="// Escribe tu código aquí..."
                   rows={8}
-                  className="font-mono text-sm"
+                  className="font-mono text-sm bg-black/40 border-white/10 text-green-400 placeholder:text-gray-600"
                 />
               </div>
             )}
@@ -349,12 +359,13 @@ export function BlockEditor({
                       value={item}
                       onChange={(e) => updateListItem(itemIndex, e.target.value)}
                       placeholder={`Elemento ${itemIndex + 1}...`}
+                      className="bg-black/20 border-white/10 text-white placeholder:text-gray-600"
                     />
                     <Button
                       onClick={() => removeListItem(itemIndex)}
                       variant="ghost"
                       size="sm"
-                      className="text-red-600"
+                      className="text-red-400 hover:text-red-300 hover:bg-red-900/20"
                     >
                       <Trash2 className="w-4 h-4" />
                     </Button>
@@ -364,7 +375,7 @@ export function BlockEditor({
                   onClick={addListItem}
                   variant="outline"
                   size="sm"
-                  className="w-full"
+                  className="w-full bg-transparent border-white/20 text-gray-300 hover:text-white hover:bg-white/10"
                 >
                   Agregar elemento
                 </Button>
@@ -377,7 +388,7 @@ export function BlockEditor({
                 onChange={(e) => onUpdate({ content: e.target.value })}
                 placeholder="Escribe la cita aquí..."
                 rows={3}
-                className="italic"
+                className="italic bg-black/20 border-white/10 text-gray-200 placeholder:text-gray-600 border-l-4 border-l-blue-500"
               />
             )}
 
@@ -387,16 +398,18 @@ export function BlockEditor({
                   value={block.buttonText || ''}
                   onChange={(e) => onUpdate({ buttonText: e.target.value })}
                   placeholder="Texto del botón..."
+                  className="bg-black/20 border-white/10 text-white placeholder:text-gray-600"
                 />
                 <Input
                   value={block.url || ''}
                   onChange={(e) => onUpdate({ url: e.target.value })}
                   placeholder="https://ejemplo.com"
                   type="url"
+                  className="bg-black/20 border-white/10 text-white placeholder:text-gray-600"
                 />
                 {(block.buttonText || block.url) && (
-                  <div className="p-3 bg-gray-50 rounded-lg border">
-                    <p className="text-sm text-gray-600 mb-2">Vista previa:</p>
+                  <div className="p-3 bg-black/40 rounded-lg border border-white/10">
+                    <p className="text-sm text-gray-400 mb-2">Vista previa:</p>
                     <button
                       className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                       disabled

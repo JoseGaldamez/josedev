@@ -53,27 +53,27 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)]">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          <h1 className="text-3xl font-bold text-white mb-2">
             Panel de Administración
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             Inicia sesión para acceder al panel de administración del blog
           </p>
         </div>
 
-        <Card className="p-8">
+        <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-sm">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
-              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md text-sm">
+              <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-md text-sm">
                 {error}
               </div>
             )}
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                 Correo electrónico
               </label>
               <Input
@@ -82,14 +82,14 @@ export default function AdminLoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full"
+                className="w-full bg-black/20 border-white/10 text-white placeholder:text-gray-500 focus:border-blue-500/50 focus:ring-blue-500/20"
                 placeholder="admin@example.com"
                 disabled={loading}
               />
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">
                 Contraseña
               </label>
               <Input
@@ -98,7 +98,7 @@ export default function AdminLoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full"
+                className="w-full bg-black/20 border-white/10 text-white placeholder:text-gray-500 focus:border-blue-500/50 focus:ring-blue-500/20"
                 placeholder="••••••••"
                 disabled={loading}
               />
@@ -107,7 +107,7 @@ export default function AdminLoginPage() {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white border-none"
             >
               {loading ? (
                 <div className="flex items-center justify-center">
@@ -122,9 +122,9 @@ export default function AdminLoginPage() {
         </Card>
 
         <div className="text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-500">
             ¿Problemas para acceder?{' '}
-            <a href="mailto:admin@josedev.com" className="text-blue-600 hover:text-blue-800">
+            <a href="mailto:admin@josedev.com" className="text-blue-400 hover:text-blue-300 transition-colors">
               Contacta soporte
             </a>
           </p>
