@@ -185,7 +185,7 @@ export const HeroSection = () => {
 
 
       <div className="relative z-10">
-        <section className="h-screen flex items-center justify-center px-6 mt-18">
+        <section className="h-screen flex items-center justify-center px-6 mt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
