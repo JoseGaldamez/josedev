@@ -3,11 +3,13 @@ import { getPublishedPostsWithLimit } from '@/lib/firestore';
 import React, { useEffect, useState } from 'react'
 import { BlogCard } from './BlogCard';
 import { Post } from '@/types/blog';
+import { BlogGridSkeleton } from './BlogGridSkeleton';
 
 
 export const BlogGrid = ({ limit }: { limit?: number }) => {
 
     const [posts, setPosts] = useState<Post[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         getPosts();
@@ -16,9 +18,16 @@ export const BlogGrid = ({ limit }: { limit?: number }) => {
     const getPosts = async () => {
         const result = await getPublishedPostsWithLimit(limit);
         setPosts(result);
+        setLoading(false);
     }
 
-    if (!posts || posts.length === 0) {
+    if (loading) {
+        return (
+            <BlogGridSkeleton />
+        );
+    }
+
+    if (!loading && (!posts || posts.length === 0)) {
         return (
             <div className="text-center py-12">
                 <h2 className="text-2xl font-thin text-white/60 mb-4">

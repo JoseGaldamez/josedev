@@ -1,10 +1,6 @@
-import { Suspense } from 'react';
 import { Metadata } from 'next';
-import { BlogCard } from '@/components/blog/BlogCard';
-import { getPublishedPosts } from '@/lib/firestore';
 import { Topbar } from '@/components/Topbar';
 import { BlogGrid } from '@/components/blog/BlogGrid';
-import { BlogGridSkeleton } from '@/components/blog/BlogGridSkeleton';
 
 export const metadata: Metadata = {
   title: 'Blog - José Galdámez',
@@ -25,7 +21,6 @@ export default async function BlogPage() {
       <Topbar />
       <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0a1425_0%,#010101_100%)] text-[#f2f2f2]">
         <div className="max-w-6xl mx-auto px-4 py-12">
-          {/* Header */}
           <header className="text-center my-12">
             <h1 className="text-4xl md:text-5xl font-thin text-white/70 mb-4">
               Blog
@@ -35,11 +30,7 @@ export default async function BlogPage() {
               tecnologías modernas y las mejores prácticas en programación.
             </p>
           </header>
-
-          {/* Posts Grid */}
-          <Suspense fallback={<BlogGridSkeleton />}>
-            <BlogGrid />
-          </Suspense>
+          <BlogGrid />
         </div>
       </div>
     </>
